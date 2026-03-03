@@ -1,0 +1,14 @@
+{
+  "nav.home": "Home",
+  "nav.manifesto": "Manifesto",
+  "nav.method": "Method",
+  "nav.pricing": "Pricing",
+  "nav.services": "Services",
+  "nav.projects": "Projects",
+  "nav.contact": "Contact",
+  "footer.rights": "All rights reserved",
+  "footer.legal": "Legal notice",
+  "footer.contact": "Contact",
+  "home.welcome": "Welcome to {{appName}}",
+  "home.section": "This is my section"
+}

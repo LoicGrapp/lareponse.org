@@ -3,8 +3,8 @@
  * Permet la navigation SPA sans rechargement de page
  */
 import { Layout } from '../layouts/Layout.js';
-// Router.js — tout en haut
-import { initFullPageScroll, destroyFullPageScroll } from '../fullpagescroll.js'; // vérifie le chemin
+import { initFullPageScroll, destroyFullPageScroll } from '../fullpagescroll.js';
+import { SUPPORTED_LOCALES, detectBrowserLocale } from '../lang.js';
 
 class Router {
   constructor() {
@@ -12,7 +12,7 @@ class Router {
     this.routes = {};
 
     // Route par défaut (404)
-    this.notFoundHandler = () => '<h1>404 - Page non trouvée</h1>';
+    this.notFoundHandler = () => '<h1>404 - Page not found</h1>';
 
     // Écouter les événements de navigation (bouton précédent/suivant)
     window.addEventListener('popstate', () => {
@@ -55,13 +55,33 @@ class Router {
    */
   handleRoute(path) {
     destroyFullPageScroll();
-    // Chercher une correspondance exacte d'abord
+
+    // Redirect racine vers la locale du navigateur
+    if (path === '/') {
+      const locale = detectBrowserLocale();
+      window.history.replaceState({}, '', `/${locale}/`);
+      this._matchAndRender('/');
+      return;
+    }
+
+    // Extraire la locale du path (/en/..., /fr/...)
+    const localeMatch = path.match(new RegExp(`^\\/(${SUPPORTED_LOCALES.join('|')})(\\/.*)?\$`));
+    if (localeMatch) {
+      const rest = localeMatch[2] || '/';
+      this._matchAndRender(rest);
+      return;
+    }
+
+    // Path sans locale connue → 404
+    this.render(this.notFoundHandler());
+  }
+
+  _matchAndRender(path) {
     if (this.routes[path]) {
       this.render(this.routes[path]());
       return;
     }
 
-    // Chercher une route avec paramètres (ex: /spots/:id)
     for (const route in this.routes) {
       const params = this.matchRoute(route, path);
       if (params) {
@@ -70,7 +90,6 @@ class Router {
       }
     }
 
-    // Aucune route trouvée
     this.render(this.notFoundHandler());
   }
 
