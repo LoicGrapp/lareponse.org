@@ -3,7 +3,6 @@
  * Permet la navigation SPA sans rechargement de page
  */
 import { Layout } from '../layouts/Layout.js';
-import { initFullPageScroll, destroyFullPageScroll } from '../fullpagescroll.js';
 import { SUPPORTED_LOCALES, detectBrowserLocale } from '../lang.js';
 
 class Router {
@@ -54,8 +53,6 @@ class Router {
    * @param {string} path - Le chemin à afficher
    */
   handleRoute(path) {
-    destroyFullPageScroll();
-
     const base = import.meta.env.BASE_URL;
     const cleanPath = path.startsWith(base) ? '/' + path.slice(base.length) : path;
 
@@ -134,21 +131,32 @@ class Router {
     const app = document.getElementById('app');
     if (app) {
       app.innerHTML = Layout({ content: html });
-      if (document.querySelector('.section')) {
-        initFullPageScroll('.section');
-      }
+      this._setupMobileMenu();
+    }
+  }
+
+  _setupMobileMenu() {
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobile-menu');
+    if (burger && menu) {
+      burger.addEventListener('click', () => {
+        const isOpen = burger.classList.contains('is-open');
+        burger.classList.toggle('is-open', !isOpen);
+        menu.classList.toggle('hidden', isOpen);
+        burger.setAttribute('aria-expanded', String(!isOpen));
+      });
     }
   }
   /**
    * Démarre le router sur la route actuelle
    */
   start() {
-    // Intercepter les clics sur les liens
+    // Intercepter les clics sur les liens (y compris les éléments enfants)
     document.addEventListener('click', (e) => {
-      // Vérifier si c'est un lien interne
-      if (e.target.matches('[data-link]')) {
+      const link = e.target.closest('[data-link]');
+      if (link) {
         e.preventDefault();
-        this.navigate(e.target.getAttribute('href'));
+        this.navigate(link.getAttribute('href'));
       }
     });
 

@@ -13,7 +13,7 @@ export function Layout(props = {}) {
   const { content = '' } = props;
 
   return `
-    <div class="layout">
+    <div class="min-h-dvh flex flex-col">
       ${Header()}
       ${Main({ content })}
       ${Footer()}

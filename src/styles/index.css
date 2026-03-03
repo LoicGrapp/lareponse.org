@@ -2,73 +2,184 @@
 
 /* Variables globales (couleurs) */
 :root {
-  --black: #0a0a0a;
-  --purple: #6366f1;
-  --white: #f0ede8;
-  --gray-p: #c8c4be;
+  --black:        #0a0a0a;
+  --bg-2:         #111111;
+  --bg-3:         #1a1a1a;
+  --bg-4:         #242424;
+  --white:        #f0ede8;
+  --gray-p:       #c8c4be;
+  --purple:       #6366f1;
+  --indigo:       #818CF8;
+  --indigo-dark:  #4F46E5;
+  --indigo-light: #A5B4FC;
+  --mint:         #34D399;
 }
 
 @layer base {
-  /* Background global + couleur par défaut */
-  html,
-  body {
+  html, body {
     background: var(--black);
     color: var(--white);
-  }
-
-  /* H1 */
-  h1 {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    color: var(--white);
-    vertical-align: middle;
-
-    /* Mobile */
-    font-size: 40px;
-    line-height: 36.8px;
-    letter-spacing: 0.8px;
-  }
-
-  /* Desktop (>= 1024px) */
-  @media (min-width: 1024px) {
-    h1 {
-      font-size: 88px;
-      /* tu n'as pas donné le line-height desktop, donc je ne l'invente pas */
-      letter-spacing: 0; /* idem: non précisé desktop */
-    }
-  }
-
-  /* P */
-  p {
     font-family: "Space Mono", monospace;
-    font-weight: 400;
-    color: var(--gray-p);
+    cursor: crosshair;
+  }
 
-    font-size: 14.1px;
-    line-height: 24.64px;
-    letter-spacing: 0%;
-    vertical-align: middle;
+  a { color: inherit; text-decoration: none; }
+  button { cursor: crosshair; font-family: inherit; }
+
+  ::selection {
+    background: var(--indigo-dark);
+    color: var(--white);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--indigo);
+    outline-offset: 3px;
   }
 }
 
-/* Classes utilitaires si tu veux réutiliser les couleurs en Tailwind */
 @layer utilities {
-  .text-brand-white {
-    color: var(--white);
-  }
-  .text-brand-gray {
-    color: var(--gray-p);
-  }
-  .text-brand-purple {
-    color: var(--purple);
-  }
-  .bg-brand-black {
-    background: var(--black);
-  }
-  .font-bebas {
-    font-family: "Bebas Neue", sans-serif;
-  }
-  .font-mono-space {
-    font-family: "Space Mono", monospace;
+  .text-brand-white  { color: var(--white); }
+  .text-brand-gray   { color: var(--gray-p); }
+  .text-brand-purple { color: var(--purple); }
+  .text-indigo       { color: var(--indigo); }
+  .text-indigo-light { color: var(--indigo-light); }
+  .text-mint         { color: var(--mint); }
+  .bg-brand-black    { background: var(--black); }
+  .bg-bg-2           { background: var(--bg-2); }
+  .bg-bg-3           { background: var(--bg-3); }
+
+  .font-bebas     { font-family: "Bebas Neue", sans-serif; }
+  .font-mono-space{ font-family: "Space Mono", monospace; }
+  .font-fragment  { font-family: "Fragment Mono", "Courier New", monospace; }
+
+  .text-outlined {
+    -webkit-text-stroke: 2px var(--white);
+    color: transparent;
   }
 }
+
+/* ── BUTTONS BRUTALISTES ─────────────────────────────── */
+.btn-hero {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .85rem 1.6rem;
+  border: 2px solid var(--indigo-dark);
+  background: var(--indigo-dark);
+  color: var(--white);
+  display: inline-block;
+  box-shadow: 5px 5px 0 var(--indigo-dark);
+  transition: transform .05s, box-shadow .05s;
+  white-space: nowrap;
+  cursor: crosshair;
+}
+.btn-hero:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 var(--indigo-dark);
+}
+.btn-hero:active {
+  transform: translate(5px, 5px);
+  box-shadow: none;
+}
+
+.btn-outline {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .85rem 1.6rem;
+  border: 2px solid var(--white);
+  background: transparent;
+  color: var(--white);
+  display: inline-block;
+  box-shadow: 5px 5px 0 var(--white);
+  transition: transform .05s, box-shadow .05s;
+  white-space: nowrap;
+  cursor: crosshair;
+}
+.btn-outline:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 var(--white);
+}
+.btn-outline:active {
+  transform: translate(5px, 5px);
+  box-shadow: none;
+}
+
+/* ── CODE BLOCK ──────────────────────────────────────── */
+.code-block {
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  font-family: "Fragment Mono", "Courier New", monospace;
+  font-size: .82rem;
+  line-height: 1.85;
+  overflow-x: auto;
+  position: relative;
+}
+.code-block::before {
+  content: '// manifeste.ts';
+  display: block;
+  padding: .6rem 1.2rem;
+  font-family: "Fragment Mono", monospace;
+  font-size: .72rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gray-p);
+  opacity: .5;
+  border-bottom: 1px solid #1a1a1a;
+  background: #080808;
+}
+.code-line {
+  display: flex;
+  padding: .15rem 1.2rem .15rem 0;
+  transition: background .1s;
+}
+.code-line:hover { background: rgba(125,100,255,.04); }
+.code-ln {
+  display: inline-block;
+  width: 3rem;
+  text-align: right;
+  padding-right: 1.2rem;
+  color: #555;
+  user-select: none;
+  flex-shrink: 0;
+  border-right: 1px solid #1a1a1a;
+  margin-right: 1rem;
+}
+.code-comment  { color: #6a6a6a; font-style: italic; }
+.code-keyword  { color: var(--indigo); }
+.code-string   { color: #7dcea0; }
+.code-fn       { color: #d4a0ff; }
+.code-const    { color: var(--white); font-weight: 600; }
+
+/* ── BURGER MENU ─────────────────────────────────────── */
+.burger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 18px;
+}
+.bar {
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  background: currentColor;
+  transition: transform .2s ease, opacity .2s ease;
+  transform-origin: center;
+}
+#burger.is-open .bar-1 { transform: translateY(5.5px) rotate(45deg); }
+#burger.is-open .bar-2 { opacity: 0; transform: scaleX(0); }
+#burger.is-open .bar-3 { transform: translateY(-5.5px) rotate(-45deg); }
+
+/* ── ANIMATIONS ──────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.anim    { animation: fadeIn .35s ease both; }
+.anim-d1 { animation-delay: .08s; }
+.anim-d2 { animation-delay: .16s; }
+.anim-d3 { animation-delay: .24s; }

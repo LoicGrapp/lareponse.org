@@ -1,53 +1,103 @@
-import { APP_NAME } from '../config/constants.js';
 import { t, localePath, getLocale, SUPPORTED_LOCALES, switchLocalePath } from '../lang.js';
 
-/**
- * Composant Header - Barre de navigation principale
- */
 export function Header() {
   const currentLocale = getLocale();
   const otherLocale = SUPPORTED_LOCALES.find(l => l !== currentLocale);
   const switchHref = switchLocalePath(otherLocale);
 
   return `
-    <header class="bg-(--black) to-black border-b border-white/5">
-        <nav class="w-full px-6 md:px-[10%] h-20 flex items-center justify-between border-b-2 border-white/10">
+    <header class="sticky top-0 z-[100] bg-[#0a0a0a] border-b-2 border-[#2e2e2e]">
 
-            <!-- Logo + Nav -->
-            <div class="self-stretch flex items-stretch">
-              <a href="${localePath('/')}" data-link class="flex items-center gap-3 text-white border-r-2 border-white/10 pr-6">
-                  <span class="text-brand-purple text-xl font-bold">?</span>
-                  <span class="uppercase tracking-widest font-semibold text-sm">${APP_NAME}</span>
+      <div class="px-6 md:px-[10%]">
+        <nav class="max-w-[72rem] mx-auto h-14 flex items-stretch justify-between">
+
+          <!-- Logo -->
+          <a href="${localePath('/')}" data-link
+             class="font-bebas text-[1.25rem] tracking-[.04em] text-[#f0ede8] flex items-center pr-6 border-r border-[#2e2e2e] self-stretch shrink-0 hover:text-[#818CF8] transition-colors">
+            <span class="text-[#818CF8]">‽</span>LARÉPONSE
+          </a>
+
+          <!-- Nav links (desktop) -->
+          <ul class="hidden md:flex items-stretch flex-1">
+            <li class="border-r border-[#2e2e2e]">
+              <a href="${localePath('/')}" data-link
+                 class="font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#f0ede8] flex items-center px-5 h-full hover:text-[#818CF8] transition-colors">
+                ${t('nav.home')}
               </a>
-              <!-- Nav Links -->
-              <ul class="hidden md:flex self-stretch pl-6 items-start space-x-4 text-[10px] tracking-widest uppercase">
-                <li class="pr-4 border-r-2 border-white/10"><a href="${localePath('/')}" data-link class="text-white border-b-2 border-(--purple) pb-1">${t('nav.home')}</a></li>
-                <li class="pr-4 border-r-2 border-white/10"><a href="#manifeste" class="text-gray-400 hover:text-white transition">${t('nav.manifesto')}</a></li>
-                <li class="pr-4 border-r-2 border-white/10"><a href="#methode" class="text-gray-400 hover:text-white transition">${t('nav.method')}</a></li>
-                <li class="pr-4 border-r-2 border-white/10"><a href="#tarifs" class="text-gray-400 hover:text-white transition">${t('nav.pricing')}</a></li>
-                <li class="pr-4 border-r-2 border-white/10"><a href="#services" class="text-gray-400 hover:text-white transition">${t('nav.services')}</a></li>
-                <li class="pr-4 border-r-2 border-white/10"><a href="#projets" class="text-gray-400 hover:text-white transition">${t('nav.projects')}</a></li>
-                <li><a href="${switchHref}" data-link class="text-gray-400 hover:text-white transition">${otherLocale.toUpperCase()}</a></li>
-            </ul>
-            </div>
+            </li>
+            <li class="border-r border-[#2e2e2e]">
+              <a href="${localePath('/manifeste')}" data-link
+                 class="font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#C8C4BE] flex items-center px-5 h-full hover:text-[#818CF8] transition-colors">
+                ${t('nav.manifesto')}
+              </a>
+            </li>
+            <li class="border-r border-[#2e2e2e]">
+              <a href="${localePath('/methode')}" data-link
+                 class="font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#C8C4BE] flex items-center px-5 h-full hover:text-[#818CF8] transition-colors">
+                ${t('nav.method')}
+              </a>
+            </li>
+            <li class="border-r border-[#2e2e2e]">
+              <a href="${localePath('/services')}" data-link
+                 class="font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#C8C4BE] flex items-center px-5 h-full hover:text-[#818CF8] transition-colors">
+                ${t('nav.services')}
+              </a>
+            </li>
+            <li>
+              <a href="${switchHref}" data-link
+                 class="font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#C8C4BE] flex items-center px-5 h-full hover:text-[#818CF8] transition-colors">
+                ${otherLocale.toUpperCase()}
+              </a>
+            </li>
+          </ul>
 
-            <!-- Contact Button -->
-            <a href="#contact" class="hidden md:inline-flex items-center bg-(--purple) text-white text-xs uppercase tracking-widest px-6 py-4 hover:bg-(--purple)/80 transition">${t('nav.contact')}<span class="ml-2">→</span></a>
+          <!-- Contact button (desktop) -->
+          <a href="${localePath('/contact')}" data-link
+             class="hidden md:flex items-center font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#f0ede8] bg-[#4F46E5] px-6 hover:bg-[#6366f1] transition-colors shrink-0 border-l border-[#2e2e2e]">
+            ${t('nav.contact')} →
+          </a>
 
-            <!-- Mobile Button -->
-            <button class="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                <path stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+          <!-- Burger (mobile) -->
+          <button id="burger" aria-label="Menu" aria-expanded="false"
+                  class="md:hidden flex items-center px-4 text-[#f0ede8]">
+            <span class="burger-icon">
+              <span class="bar bar-1"></span>
+              <span class="bar bar-2"></span>
+              <span class="bar bar-3"></span>
+            </span>
+          </button>
+
         </nav>
+      </div>
+
+      <!-- Mobile menu (full-width) -->
+      <div id="mobile-menu" class="hidden md:hidden bg-[#0a0a0a] border-t border-[#2e2e2e]">
+        <a href="${localePath('/')}" data-link
+           class="block font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#f0ede8] px-6 py-4 border-b border-[#1e1e1e] hover:text-[#818CF8] transition-colors">
+          ${t('nav.home')}
+        </a>
+        <a href="${localePath('/manifeste')}" data-link
+           class="block font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#C8C4BE] px-6 py-4 border-b border-[#1e1e1e] hover:text-[#818CF8] transition-colors">
+          ${t('nav.manifesto')}
+        </a>
+        <a href="${localePath('/methode')}" data-link
+           class="block font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#C8C4BE] px-6 py-4 border-b border-[#1e1e1e] hover:text-[#818CF8] transition-colors">
+          ${t('nav.method')}
+        </a>
+        <a href="${localePath('/services')}" data-link
+           class="block font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#C8C4BE] px-6 py-4 border-b border-[#1e1e1e] hover:text-[#818CF8] transition-colors">
+          ${t('nav.services')}
+        </a>
+        <a href="${switchHref}" data-link
+           class="block font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#C8C4BE] px-6 py-4 border-b border-[#1e1e1e] hover:text-[#818CF8] transition-colors">
+          ${otherLocale.toUpperCase()}
+        </a>
+        <a href="${localePath('/contact')}" data-link
+           class="block font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#818CF8] px-6 py-4">
+          ${t('nav.contact')} →
+        </a>
+      </div>
+
     </header>
   `;
 }

@@ -1,14 +1,46 @@
 {
-  "nav.home": "Home",
-  "nav.manifesto": "Manifesto",
-  "nav.method": "Method",
-  "nav.pricing": "Pricing",
-  "nav.services": "Services",
-  "nav.projects": "Projects",
-  "nav.contact": "Contact",
-  "footer.rights": "All rights reserved",
-  "footer.legal": "Legal notice",
-  "footer.contact": "Contact",
-  "home.welcome": "Welcome to {{appName}}",
-  "home.section": "This is my section"
+  "nav.home":        "Home",
+  "nav.manifesto":   "Manifesto",
+  "nav.method":      "Method",
+  "nav.pricing":     "Pricing",
+  "nav.services":    "Services",
+  "nav.projects":    "Projects",
+  "nav.contact":     "Contact",
+  "footer.rights":   "All rights reserved",
+  "footer.legal":    "Legal notice",
+  "footer.contact":  "Contact",
+
+  "hero.eyebrow":       "Radical simplicity — Lifetime guarantee",
+  "hero.title.1":       "NO",
+  "hero.title.2":       "LYING",
+  "hero.title.3":       "ABOUT",
+  "hero.title.4":       "COMPLEXITY",
+  "hero.sub":           "We design stable, readable, transferable systems — for freelancers, associations and small structures.",
+  "hero.sub2":          "Paid once. Validated in 30 days. Guaranteed for life.",
+  "hero.cta.primary":   "Describe my need →",
+  "hero.cta.secondary": "See the method",
+
+  "proof.1": "Validated in 30 days",
+  "proof.2": "Never billed twice",
+  "proof.3": "Accessibility included",
+  "proof.4": "Credits billed by the minute",
+
+  "services.heading": "WHAT WE DO",
+  "services.cta":     "See all services →",
+  "s1.code":  "S-01",
+  "s1.title": "Showcase sites & portals",
+  "s1.body":  "Consistent sites, portals and platforms designed to last without hidden debt.",
+  "s2.code":  "S-02",
+  "s2.title": "Custom tools",
+  "s2.body":  "Calibrated for freelancers, associations and small structures. Each bug fixed once.",
+  "s3.code":  "S-03",
+  "s3.title": "Automations & parsers",
+  "s3.body":  "Crawlers, document processing, reporting. Lean and stable architectures.",
+
+  "manifeste.cta": "Read the full manifesto →",
+
+  "cta.heading": "READY TO BUILD?",
+  "cta.btn":     "Describe my need →",
+
+  "footer.motto": "What is visible can be questioned."
 }
