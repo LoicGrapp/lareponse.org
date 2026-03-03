@@ -14,7 +14,7 @@ export function Header() {
                 <span class="uppercase tracking-widest font-semibold text-sm">Laréponse</span>
             </a>
             <!-- Nav Links -->
-            <ul class="hidden md:flex self-stretch border-l-2 border-white/10 pl-8 items-start self-start space-x-10 text-xs tracking-widest uppercase">
+            <ul class="hidden md:flex self-stretch border-l-2 border-white/10 pl-8 items-start space-x-10 text-xs tracking-widest uppercase">
                 <li class="pr-6 border-r-2 border-white/10"><a href="#" class="text-white border-b-2 border-accentRed pb-1">Accueil</a></li>
                 <li class="pr-6 border-r-2 border-white/10"><a href="#" class="text-gray-400 hover:text-white transition">Manifeste</a></li>
                 <li class="pr-6 border-r-2 border-white/10"><a href="#" class="text-gray-400 hover:text-white transition">Méthode</a></li>
