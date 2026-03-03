@@ -12,23 +12,25 @@ export function Header() {
 
   return `
     <header class="bg-(--black) to-black border-b border-white/5">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between border-b-2 border-white/10">
+        <nav class="w-full px-6 md:px-[10%] h-20 flex items-center justify-between border-b-2 border-white/10">
 
-            <!-- Logo -->
-            <a href="${localePath('/')}" data-link class="flex items-center gap-3 text-white">
-                <span class="text-brand-purple text-xl font-bold">?</span>
-                <span class="uppercase tracking-widest font-semibold text-sm">${APP_NAME}</span>
-            </a>
-            <!-- Nav Links -->
-            <ul class="hidden md:flex self-stretch border-l-2 border-white/10 pl-8 items-start space-x-10 text-xs tracking-widest uppercase">
-                <li class="pr-6 border-r-2 border-white/10"><a href="${localePath('/')}" data-link class="text-white border-b-2 border-(--purple) pb-1">${t('nav.home')}</a></li>
-                <li class="pr-6 border-r-2 border-white/10"><a href="#manifeste" class="text-gray-400 hover:text-white transition">${t('nav.manifesto')}</a></li>
-                <li class="pr-6 border-r-2 border-white/10"><a href="#methode" class="text-gray-400 hover:text-white transition">${t('nav.method')}</a></li>
-                <li class="pr-6 border-r-2 border-white/10"><a href="#tarifs" class="text-gray-400 hover:text-white transition">${t('nav.pricing')}</a></li>
-                <li class="pr-6 border-r-2 border-white/10"><a href="#services" class="text-gray-400 hover:text-white transition">${t('nav.services')}</a></li>
-                <li class="pr-6 border-r-2 border-white/10"><a href="#projets" class="text-gray-400 hover:text-white transition">${t('nav.projects')}</a></li>
+            <!-- Logo + Nav -->
+            <div class="self-stretch flex items-stretch">
+              <a href="${localePath('/')}" data-link class="flex items-center gap-3 text-white border-r-2 border-white/10 pr-6">
+                  <span class="text-brand-purple text-xl font-bold">?</span>
+                  <span class="uppercase tracking-widest font-semibold text-sm">${APP_NAME}</span>
+              </a>
+              <!-- Nav Links -->
+              <ul class="hidden md:flex self-stretch pl-6 items-start space-x-4 text-[10px] tracking-widest uppercase">
+                <li class="pr-4 border-r-2 border-white/10"><a href="${localePath('/')}" data-link class="text-white border-b-2 border-(--purple) pb-1">${t('nav.home')}</a></li>
+                <li class="pr-4 border-r-2 border-white/10"><a href="#manifeste" class="text-gray-400 hover:text-white transition">${t('nav.manifesto')}</a></li>
+                <li class="pr-4 border-r-2 border-white/10"><a href="#methode" class="text-gray-400 hover:text-white transition">${t('nav.method')}</a></li>
+                <li class="pr-4 border-r-2 border-white/10"><a href="#tarifs" class="text-gray-400 hover:text-white transition">${t('nav.pricing')}</a></li>
+                <li class="pr-4 border-r-2 border-white/10"><a href="#services" class="text-gray-400 hover:text-white transition">${t('nav.services')}</a></li>
+                <li class="pr-4 border-r-2 border-white/10"><a href="#projets" class="text-gray-400 hover:text-white transition">${t('nav.projects')}</a></li>
                 <li><a href="${switchHref}" data-link class="text-gray-400 hover:text-white transition">${otherLocale.toUpperCase()}</a></li>
             </ul>
+            </div>
 
             <!-- Contact Button -->
             <a href="#contact" class="hidden md:inline-flex items-center bg-(--purple) text-white text-xs uppercase tracking-widest px-6 py-4 hover:bg-(--purple)/80 transition">${t('nav.contact')}<span class="ml-2">→</span></a>

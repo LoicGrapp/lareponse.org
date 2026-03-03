@@ -8,8 +8,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return `
-    <footer class="footer">
-      <div class="footer__container">
+    <footer class="w-full px-6 md:px-[10%]">
+      <div class="w-full">
         <p>&copy; ${currentYear} ${APP_NAME} - ${t('footer.rights')}</p>
         <nav class="footer__nav">
           <a href="${localePath('/mentions-legales')}" data-link>${t('footer.legal')}</a>

@@ -8,10 +8,14 @@ import { t } from '../lang.js';
 export function HomePage() {
   return `
     <section class="section h-dvh w-full pt-8">
-      <h1>${t('home.welcome', { appName: APP_NAME })}</h1>
+      <div class="px-6 md:px-[10%] h-full">
+        <h1>${t('home.welcome', { appName: APP_NAME })}</h1>
+      </div>
     </section>
     <section class="section h-dvh w-full pt-8">
-      ${t('home.section')}
+      <div class="px-6 md:px-[10%] h-full">
+        ${t('home.section')}
+      </div>
     </section>
   `;
 }

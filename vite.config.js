@@ -4,6 +4,11 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   root: 'src',
+  base: "/lareponse.org/",
+  build: {
+    outDir: "../dist",
+    emptyOutDir: true
+  },
   plugins: [
     tailwindcss(),
   ],
