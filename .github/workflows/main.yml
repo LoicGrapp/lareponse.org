@@ -27,6 +27,12 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      - name: Debug dist
+        run: |
+          pwd
+          ls -la
+          ls -la dist || true
+          ls -la src || true
 
       - uses: actions/upload-pages-artifact@v3
         with:
