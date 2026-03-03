@@ -65,4 +65,10 @@
   .bg-brand-black {
     background: var(--black);
   }
+  .font-bebas {
+    font-family: "Bebas Neue", sans-serif;
+  }
+  .font-mono-space {
+    font-family: "Space Mono", monospace;
+  }
 }
