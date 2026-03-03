@@ -3,6 +3,8 @@
  * Permet la navigation SPA sans rechargement de page
  */
 import { Layout } from '../layouts/Layout.js';
+// Router.js — tout en haut
+import { initFullPageScroll, destroyFullPageScroll } from '../fullpagescroll.js'; // vérifie le chemin
 
 class Router {
   constructor() {
@@ -52,6 +54,7 @@ class Router {
    * @param {string} path - Le chemin à afficher
    */
   handleRoute(path) {
+    destroyFullPageScroll();
     // Chercher une correspondance exacte d'abord
     if (this.routes[path]) {
       this.render(this.routes[path]());
@@ -105,13 +108,15 @@ class Router {
    * @param {string} html - Le HTML à afficher
    */
 
-render(html) {
+  render(html) {
     const app = document.getElementById('app');
     if (app) {
-        app.innerHTML = Layout({ content: html });
+      app.innerHTML = Layout({ content: html });
+      if (document.querySelector('.section')) {
+        initFullPageScroll('.section');
+      }
     }
-    }
-
+  }
   /**
    * Démarre le router sur la route actuelle
    */

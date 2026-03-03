@@ -1,19 +1,68 @@
 @import "tailwindcss";
 
+/* Variables globales (couleurs) */
+:root {
+  --black: #0a0a0a;
+  --purple: #6366f1;
+  --white: #f0ede8;
+  --gray-p: #c8c4be;
+}
+
 @layer base {
+  /* Background global + couleur par défaut */
+  html,
+  body {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  /* H1 */
   h1 {
-    @apply text-4xl font-bold;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    color: var(--white);
+    vertical-align: middle;
+
+    /* Mobile */
+    font-size: 40px;
+    line-height: 36.8px;
+    letter-spacing: 0.8px;
   }
 
-  h2 {
-    @apply text-3xl font-semibold;
+  /* Desktop (>= 1024px) */
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 88px;
+      /* tu n'as pas donné le line-height desktop, donc je ne l'invente pas */
+      letter-spacing: 0; /* idem: non précisé desktop */
+    }
   }
 
-  h3 {
-    @apply text-2xl font-semibold;
-  }
-
+  /* P */
   p {
-    @apply text-base leading-relaxed;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    color: var(--gray-p);
+
+    font-size: 14.1px;
+    line-height: 24.64px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
+}
+
+/* Classes utilitaires si tu veux réutiliser les couleurs en Tailwind */
+@layer utilities {
+  .text-brand-white {
+    color: var(--white);
+  }
+  .text-brand-gray {
+    color: var(--gray-p);
+  }
+  .text-brand-purple {
+    color: var(--purple);
+  }
+  .bg-brand-black {
+    background: var(--black);
   }
 }
