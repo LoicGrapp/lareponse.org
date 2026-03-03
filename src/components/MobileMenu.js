@@ -1,16 +1,19 @@
-import { APP_NAME, ROUTES } from '../config/constants.js';
+import { APP_NAME } from '../config/constants.js';
+import { t, localePath } from '../lang.js';
 
-const NAV_ITEMS = [
-  { label: 'ACCUEIL', href: ROUTES.HOME },
-  { label: 'MANIFESTE', href: '#manifeste' },
-  { label: 'MÉTHODE', href: '#methode' },
-  { label: 'TARIFS', href: '#tarifs' },
-  { label: 'SERVICES', href: '#services' },
-  { label: 'PROJETS', href: '#projets' },
-];
+function getNavItems() {
+  return [
+    { label: t('nav.home').toUpperCase(), href: localePath('/') },
+    { label: t('nav.manifesto').toUpperCase(), href: '#manifeste' },
+    { label: t('nav.method').toUpperCase(), href: '#methode' },
+    { label: t('nav.pricing').toUpperCase(), href: '#tarifs' },
+    { label: t('nav.services').toUpperCase(), href: '#services' },
+    { label: t('nav.projects').toUpperCase(), href: '#projets' },
+  ];
+}
 
 export function MobileMenu(activeHref = '') {
-  const navLinks = NAV_ITEMS.map(({ label, href }) => {
+  const navLinks = getNavItems().map(({ label, href }) => {
     const isActive = href === activeHref;
     const activeClasses = isActive
       ? 'border-l-[3px] border-[var(--purple)] bg-white/5'
@@ -29,7 +32,7 @@ export function MobileMenu(activeHref = '') {
       <!-- Header -->
       <div class="flex items-center h-[54px] shrink-0 px-4">
 
-        <a href="${ROUTES.HOME}" data-link class="flex items-center gap-2">
+        <a href="${localePath('/')}" data-link class="flex items-center gap-2">
           <span class="font-mono-space text-brand-purple text-sm">?</span>
           <span class="font-bebas text-brand-white text-2xl tracking-wider uppercase">${APP_NAME}</span>
         </a>
