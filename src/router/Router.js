@@ -56,16 +56,19 @@ class Router {
   handleRoute(path) {
     destroyFullPageScroll();
 
+    const base = import.meta.env.BASE_URL;
+    const cleanPath = path.startsWith(base) ? '/' + path.slice(base.length) : path;
+
     // Redirect racine vers la locale du navigateur
-    if (path === '/') {
+    if (cleanPath === '/') {
       const locale = detectBrowserLocale();
-      window.history.replaceState({}, '', `/${locale}/`);
+      window.history.replaceState({}, '', `${base}${locale}/`);
       this._matchAndRender('/');
       return;
     }
 
     // Extraire la locale du path (/en/..., /fr/...)
-    const localeMatch = path.match(new RegExp(`^\\/(${SUPPORTED_LOCALES.join('|')})(\\/.*)?\$`));
+    const localeMatch = cleanPath.match(new RegExp(`^\\/(${SUPPORTED_LOCALES.join('|')})(\\/.*)?\$`));
     if (localeMatch) {
       const rest = localeMatch[2] || '/';
       this._matchAndRender(rest);

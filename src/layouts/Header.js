@@ -1,5 +1,5 @@
 import { APP_NAME } from '../config/constants.js';
-import { t, localePath, getLocale, SUPPORTED_LOCALES } from '../lang.js';
+import { t, localePath, getLocale, SUPPORTED_LOCALES, switchLocalePath } from '../lang.js';
 
 /**
  * Composant Header - Barre de navigation principale
@@ -7,8 +7,7 @@ import { t, localePath, getLocale, SUPPORTED_LOCALES } from '../lang.js';
 export function Header() {
   const currentLocale = getLocale();
   const otherLocale = SUPPORTED_LOCALES.find(l => l !== currentLocale);
-  const switchPath = window.location.pathname.replace(/^\/(en|fr)/, '') || '/';
-  const switchHref = `/${otherLocale}${switchPath === '/' ? '' : switchPath}`;
+  const switchHref = switchLocalePath(otherLocale);
 
   return `
     <header class="bg-(--black) to-black border-b border-white/5">

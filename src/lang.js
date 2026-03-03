@@ -5,8 +5,15 @@ const LOCALES = { en, fr };
 export const SUPPORTED_LOCALES = ['en', 'fr'];
 export const DEFAULT_LOCALE = 'en';
 
+const BASE = import.meta.env.BASE_URL; // '/' en dev, '/lareponse.org/' en prod
+
+function stripBase(path) {
+  return path.startsWith(BASE) ? '/' + path.slice(BASE.length) : path;
+}
+
 export function getLocale() {
-  const match = window.location.pathname.match(/^\/(en|fr)/);
+  const cleanPath = stripBase(window.location.pathname);
+  const match = cleanPath.match(/^\/(en|fr)/);
   return match ? match[1] : DEFAULT_LOCALE;
 }
 
@@ -20,7 +27,16 @@ export function t(key, vars = {}) {
 }
 
 export function localePath(path) {
-  return `/${getLocale()}${path === '/' ? '' : path}`;
+  const locale = getLocale();
+  if (path === '/') return `${BASE}${locale}/`;
+  return `${BASE}${locale}${path}`;
+}
+
+export function switchLocalePath(newLocale) {
+  const cleanPath = stripBase(window.location.pathname);
+  const withoutLocale = cleanPath.replace(/^\/(en|fr)/, '') || '/';
+  if (withoutLocale === '/') return `${BASE}${newLocale}/`;
+  return `${BASE}${newLocale}${withoutLocale}`;
 }
 
 export function detectBrowserLocale() {
