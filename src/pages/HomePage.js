@@ -1,6 +1,5 @@
 // src/pages/HomePage.js
 import { APP_NAME } from '../config/constants.js';
-import { initFullPageScroll, destroyFullPageScroll } from '../fullPageScroll.js'
 
 
 
