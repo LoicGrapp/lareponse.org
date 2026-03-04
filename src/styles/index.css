@@ -23,6 +23,10 @@
   --fs-body:       0.9375rem; /* 15px */
   --fs-label:      0.78rem;
   --fs-xs:         0.72rem;
+
+  /* H1 des pages intérieures (contact, tarifs, services…) */
+  --fs-page-num:   clamp(4rem, 9vw, 7rem);   /* le numéro 02 / 03 */
+  --fs-page-h1:    clamp(3rem, 7vw, 5.5rem); /* le titre de page  */
 }
 
 @layer base {
@@ -75,6 +79,8 @@
   .fs-body       { font-size: var(--fs-body); line-height: 1.7; }
   .fs-label      { font-size: var(--fs-label); }
   .fs-xs         { font-size: var(--fs-xs); }
+  .fs-page-num   { font-size: var(--fs-page-num); }
+  .fs-page-h1    { font-size: var(--fs-page-h1); }
 }
 
 /* ── BUTTONS BRUTALISTES ─────────────────────────────── */
