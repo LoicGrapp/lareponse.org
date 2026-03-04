@@ -74,8 +74,14 @@
   "contact.requirements.body": "Votre besoin, votre contexte (asso / commercial), et si vous avez une contrainte de délai",
   "contact.after.title" :" CE QUI SE PASSE ENSUITE",
   "contact.after.body": "Un échange pour cadrer le périmètre, puis une estimation honnête en crédits-minutes", 
-  "contact.privacy.title": " CONFIDENTIALITÉ",
-  "contact.privacy.body":" Pas de newsletter. Pas de CRM. Pas de relance automatisée.",
+  "contact.privacy.title": "Confidentialité",
+  "contact.privacy.body": "Pas de newsletter. Pas de CRM. Pas de relance automatisée.",
+
+  "contact.form.label":      "Votre besoin",
+  "contact.form.placeholder": "Ce que vous voulez construire, pour qui, dans quel délai...",
+  "contact.form.coords":     "N'oubliez pas d'indiquer vos coordonnées.",
+  "contact.form.submit":     "Envoyer →",
+  "contact.form.reassure":   "PAS DE NEWSLETTER · PAS DE RELANCE · UNE PERSONNE LIRA VOTRE MESSAGE",
 
   "pricing.title":      "TARIFS & MÉTHODE",
   "pricing.note":       "Crédits prépayés — débités à la minute. Un seul tarif s'applique selon le moment de la demande.",

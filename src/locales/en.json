@@ -75,7 +75,13 @@
   "contact.after.title": "What happens next",
   "contact.after.body" :" A quick exchange to define the scope, then an honest estimate in credit‑minutes.",
   "contact.privacy.title": "Privacy",
-  "contact.privacy.body": " No newsletter. No CRM. No automated follow‑ups.",
+  "contact.privacy.body": "No newsletter. No CRM. No automated follow-ups.",
+
+  "contact.form.label":      "Your need",
+  "contact.form.placeholder": "What you want to build, for whom, within what timeframe...",
+  "contact.form.coords":     "Don't forget to include your contact details.",
+  "contact.form.submit":     "Send →",
+  "contact.form.reassure":   "NO NEWSLETTER · NO FOLLOW-UP · A HUMAN WILL READ YOUR MESSAGE",
 
   "pricing.title":      "PRICING & METHOD",
   "pricing.note":       "Prepaid credits — billed by the minute. A single rate applies depending on when the request is made.",
