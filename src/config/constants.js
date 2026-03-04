@@ -10,6 +10,7 @@ export const API_URL = 'http://localhost:3001';
 
 export const ROUTES = {
   HOME: '/',
+  SERVICES: '/services',
   CONTACT: '/contact',
   PRICING: '/pricing',
   ABOUT: '/about',

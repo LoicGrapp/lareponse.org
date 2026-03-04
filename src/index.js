@@ -5,6 +5,7 @@ import { initGridPulse } from './utils/gridPulse.js';
 // Import des pages (à créer)
 import { HomePage } from './pages/HomePage.js';
 import { NotFoundPage } from './pages/NotFoundPage.js';
+import { ServicesPage } from './pages/ServicesPage.js';
 import { Contact } from './pages/contact.js';
 import { Pricing } from './pages/Pricing.js';
 import { About } from './pages/About.js';
@@ -13,6 +14,7 @@ import { Projects } from './pages/Projects.js';
 // Configuration des routes
 router
   .addRoute(ROUTES.HOME, HomePage)
+  .addRoute(ROUTES.SERVICES, ServicesPage)
   .addRoute(ROUTES.CONTACT, Contact)
   .addRoute(ROUTES.PRICING, Pricing)
   .addRoute(ROUTES.ABOUT, About)
