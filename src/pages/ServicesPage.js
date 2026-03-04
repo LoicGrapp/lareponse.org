@@ -1,110 +1,97 @@
 import { t, localePath } from '../lang.js';
 
 export function ServicesPage() {
-    return /*html*/`
-        <!-- SERVICES PAGE -->
-    <section class="bg-(--black) text-(--white)">
-        <div class="mx-auto max-w-6xl px-6 py-16">
-            <!-- Header -->
-        <div class="flex items-end gap-4">
-            <div class="text-[112px] leading-none font-bebas tracking-tight text-(--indigo) relative top-1">01</div>
-            <h1 class="text-[88px] leading-none font-bebas tracking-tight">SERVICES</h1>
+  return `
+    <div class="px-6 md:px-[10%] py-12">
+      <div class="max-w-[72rem] mx-auto">
+
+        <!-- ── PAGE HEADER ─────────────────────────────── -->
+        <header class="pb-6 mb-10 border-b-2 border-[var(--indigo)] anim">
+          <h1 class="font-bebas leading-none flex items-baseline gap-4">
+            <span class="fs-page-num text-[var(--indigo)]">03</span>
+            <span class="fs-page-h1 text-[var(--white)]">${t('services.title')}</span>
+          </h1>
+        </header>
+
+        <!-- ── SERVICE GRID ─────────────────────────────── -->
+        <div class="svc-grid anim anim-d1" role="list">
+
+          <article class="svc" role="listitem">
+            <p class="svc-id">S&#8211;01</p>
+            <h2 class="svc-title">${t('s1.title')}</h2>
+            <p class="svc-benefit">${t('s1.benefit')}</p>
+          </article>
+
+          <article class="svc" role="listitem">
+            <p class="svc-id">S&#8211;02</p>
+            <h2 class="svc-title">${t('s2.title')}</h2>
+            <p class="svc-benefit">${t('s2.benefit')}</p>
+          </article>
+
+          <article class="svc" role="listitem">
+            <p class="svc-id">S&#8211;03</p>
+            <h2 class="svc-title">${t('s3.title')}</h2>
+            <p class="svc-benefit">${t('s3.benefit')}</p>
+          </article>
+
+          <article class="svc" role="listitem">
+            <p class="svc-id">S&#8211;04</p>
+            <h2 class="svc-title">${t('s4.title')}</h2>
+            <p class="svc-benefit">${t('s4.benefit')}</p>
+          </article>
+
+          <article class="svc" role="listitem">
+            <p class="svc-id">S&#8211;05</p>
+            <h2 class="svc-title">${t('s5.title')}</h2>
+            <p class="svc-benefit">${t('s5.benefit')}</p>
+          </article>
+
+          <article class="svc" role="listitem">
+            <p class="svc-id">S&#8211;06</p>
+            <h2 class="svc-title">${t('s6.title')}</h2>
+            <p class="svc-benefit">${t('s6.benefit')}</p>
+          </article>
+
         </div>
 
-        <div class="mt-6 h-0.5 w-full" style="background: var(--indigo); opacity: .75;"></div>
+        <!-- ── PRICING STRIP ────────────────────────────── -->
+        <section class="mt-10 pt-8 border-t-2 border-[var(--indigo)] anim anim-d2" aria-label="${t('services.pricing.label')}">
+          <p class="font-fragment fs-label tracking-[.18em] uppercase text-[var(--gray-p)] mb-6">${t('services.pricing.label')}</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
-        <!-- Grid wrapper with purple accent right + bottom -->
-        <div class="relative mt-10">
-            <div class="absolute -right-0.5 top-0 z-10 h-full w-1" style="background: var(--indigo-light); opacity: .8;"></div>
-            <div class="absolute bottom-0 left-0 z-10 h-1 w-full" style="background: var(--indigo-light); opacity: .8;"></div>
-
-            <div class="grid grid-cols-1 overflow-hidden border border-[#2A2A2A] md:grid-cols-3">
-                <!-- Card 1 -->
-                <div class="group relative border border-[#2a2a2a] bg-[#0c0c0c] overflow-hidden transition-colors duration-150 hover:border-[#818CF8]">
-                    <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment text-[.72rem] text-[#C8C4BE] opacity-60" style="font-size:.72rem">
-                        <span class="text-[#818CF8] font-bold">$</span><span>~/services/s01</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="font-fragment tracking-[.22em] uppercase text-[#818CF8] mb-2" style="font-size:.75rem">S-01</p>
-                        <p class="font-bebas tracking-[.04em] leading-none text-[#f0ede8] mb-2" style="font-size:1.5rem;line-height:1">Sites vitrines &amp; portails</p>
-                        <p class="text-[#C8C4BE]" style="font-size:.83rem;line-height:1.65">Sites, portails et plateformes cohérents, conçus pour durer sans dette cachée.</p>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0" style="font-size:.72rem">→ deployed: zero-debt stack</div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="group relative border border-[#2a2a2a] bg-[#0c0c0c] overflow-hidden transition-colors duration-150 hover:border-[#818CF8]">
-                    <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment text-[.72rem] text-[#C8C4BE] opacity-60" style="font-size:.72rem">
-                        <span class="text-[#818CF8] font-bold">$</span><span>~/services/s02</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="font-fragment tracking-[.22em] uppercase text-[#818CF8] mb-2" style="font-size:.75rem">S-02</p>
-                        <p class="font-bebas tracking-[.04em] leading-none text-[#f0ede8] mb-2" style="font-size:1.5rem;line-height:1">Outils sur mesure</p>
-                        <p class="text-[#C8C4BE]" style="font-size:.83rem;line-height:1.65">Calibrés pour indépendants, associations et petites structures. Chaque bug corrigé une seule fois.</p>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0" style="font-size:.72rem">→ built: custom tooling</div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="group relative border border-[#2a2a2a] bg-[#0c0c0c] overflow-hidden transition-colors duration-150 hover:border-[#818CF8]">
-                    <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment text-[.72rem] text-[#C8C4BE] opacity-60" style="font-size:.72rem">
-                        <span class="text-[#818CF8] font-bold">$</span><span>~/services/s03</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="font-fragment tracking-[.22em] uppercase text-[#818CF8] mb-2" style="font-size:.75rem">S-03</p>
-                        <p class="font-bebas tracking-[.04em] leading-none text-[#f0ede8] mb-2" style="font-size:1.5rem;line-height:1">Automatisations &amp; parsers</p>
-                        <p class="text-[#C8C4BE]" style="font-size:.83rem;line-height:1.65">Crawlers, traitement documentaire, reporting. Architectures sobres et stables.</p>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0" style="font-size:.72rem">→ running: stable pipeline</div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="group relative border border-[#2a2a2a] bg-[#0c0c0c] overflow-hidden transition-colors duration-150 hover:border-[#818CF8]">
-                    <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment text-[.72rem] text-[#C8C4BE] opacity-60" style="font-size:.72rem">
-                        <span class="text-[#818CF8] font-bold">$</span><span>~/services/s04</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="font-fragment tracking-[.22em] uppercase text-[#818CF8] mb-2" style="font-size:.75rem">S-04</p>
-                        <p class="font-bebas tracking-[.04em] leading-none text-[#f0ede8] mb-2" style="font-size:1.5rem;line-height:1">Crawlers &amp; parseurs</p>
-                        <p class="text-[#C8C4BE]" style="font-size:.83rem;line-height:1.65">Extraire, structurer et exploiter des données brutes. Pas d'intermédiaire pour ce que la machine peut faire seule.</p>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0" style="font-size:.72rem">→ automated: raw data processing</div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="group relative border border-[#2a2a2a] bg-[#0c0c0c] overflow-hidden transition-colors duration-150 hover:border-[#818CF8]">
-                    <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment text-[.72rem] text-[#C8C4BE] opacity-60" style="font-size:.72rem">
-                        <span class="text-[#818CF8] font-bold">$</span><span>~/services/s05</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="font-fragment tracking-[.22em] uppercase text-[#818CF8] mb-2" style="font-size:.75rem">S-05</p>
-                        <p class="font-bebas tracking-[.04em] leading-none text-[#f0ede8] mb-2" style="font-size:1.5rem;line-height:1">Traitement documentaire</p>
-                        <p class="text-[#C8C4BE]" style="font-size:.83rem;line-height:1.65">PDF, factures, formulaires, archives — transformer la masse en structure lisible et immédiatement exploitable.</p>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0" style="font-size:.72rem">→ parsed: structured document data</div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="group relative border border-[#2a2a2a] bg-[#0c0c0c] overflow-hidden transition-colors duration-150 hover:border-[#818CF8]">
-                    <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment text-[.72rem] text-[#C8C4BE] opacity-60" style="font-size:.72rem">
-                        <span class="text-[#818CF8] font-bold">$</span><span>~/services/s06</span>
-                    </div>
-                    <div class="p-6">
-                        <p class="font-fragment tracking-[.22em] uppercase text-[#818CF8] mb-2" style="font-size:.75rem">S-06</p>
-                        <p class="font-bebas tracking-[.04em] leading-none text-[#f0ede8] mb-2" style="font-size:1.5rem;line-height:1">Reporting &amp; Dashboards</p>
-                        <p class="text-[#C8C4BE]" style="font-size:.83rem;line-height:1.65">Des indicateurs que vous comprenez sans formation, mis à jour sans intervention externe ni abonnement SaaS.</p>
-                    </div>
-                    <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0" style="font-size:.72rem">→ measured: self-updating metrics</div>
-                </div>
+            <div class="svc-price-card">
+              <div class="svc-price-head">
+                <span class="svc-price-name">${t('pricing.c1.name')}</span>
+                <span class="svc-price-amount">37 €/h</span>
+              </div>
+              <a href="${localePath('/pricing')}" data-link class="svc-price-link">${t('services.pricing.cta')}</a>
             </div>
+
+            <div class="svc-price-card svc-price-card--featured">
+              <div class="svc-price-head">
+                <span class="svc-price-name">${t('pricing.c2.name')}</span>
+                <span class="svc-price-amount">73 €/h</span>
+              </div>
+              <a href="${localePath('/pricing')}" data-link class="svc-price-link">${t('services.pricing.cta')}</a>
+            </div>
+
+            <div class="svc-price-card">
+              <div class="svc-price-head">
+                <span class="svc-price-name">${t('pricing.c3.name')}</span>
+                <span class="svc-price-amount">96 €/h</span>
+              </div>
+              <a href="${localePath('/pricing')}" data-link class="svc-price-link">${t('services.pricing.cta')}</a>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ── CTA ─────────────────────────────────────── -->
+        <div class="text-center mt-12 anim anim-d3">
+          <a href="${localePath('/contact')}" data-link class="btn-hero">${t('cta.btn')}</a>
         </div>
 
-            <!-- Buttons -->
-            <div class="mt-10 flex flex-wrap gap-4">
-                <a href="#" class="btn-hero">Décrire mon besoin →</a>
-                <a href="#" class="btn-outline">Voir les tarifs →</a>
-            </div>
-        </div>
-    </section>
-    `;
+      </div>
+    </div>
+  `;
 }

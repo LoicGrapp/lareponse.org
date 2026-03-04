@@ -27,16 +27,37 @@
   "proof.4": "Crédits débités à la minute",
 
   "services.heading": "CE QUE NOUS FAISONS",
+  "services.title":   "SERVICES",
   "services.cta":     "Voir tous les services →",
-  "s1.code":  "S-01",
-  "s1.title": "Sites vitrines & portails",
-  "s1.body":  "Sites, portails et plateformes cohérents, conçus pour durer sans dette cachée.",
-  "s2.code":  "S-02",
-  "s2.title": "Outils sur mesure",
-  "s2.body":  "Calibrés pour indépendants, associations et petites structures. Chaque bug corrigé une seule fois.",
-  "s3.code":  "S-03",
-  "s3.title": "Automatisations & parsers",
-  "s3.body":  "Crawlers, traitement documentaire, reporting. Architectures sobres et stables.",
+  "services.pricing.label": "Nos tarifs",
+  "services.pricing.cta":   "Voir les tarifs",
+
+  "s1.code":    "S-01",
+  "s1.title":   "Sites vitrines & portails",
+  "s1.body":    "Sites, portails et plateformes cohérents, conçus pour durer sans dette cachée.",
+  "s1.benefit": "Une présence lisible, rapide, sans dette technique. Vous pouvez la reprendre, la modifier, la transmettre sans nous.",
+
+  "s2.code":    "S-02",
+  "s2.title":   "E-commerce & réservation",
+  "s2.body":    "Des flux d'achat ou de réservation sobres et stables.",
+  "s2.benefit": "Des flux d'achat ou de réservation sobres et stables. Chaque étape du parcours est compréhensible — sans boîte noire.",
+
+  "s3.code":    "S-03",
+  "s3.title":   "Automatisations",
+  "s3.body":    "Crawlers, traitement documentaire, reporting. Architectures sobres et stables.",
+  "s3.benefit": "Éliminer les tâches répétitives sans créer une dépendance opaque à des services tiers qui peuvent disparaître.",
+
+  "s4.code":    "S-04",
+  "s4.title":   "Crawlers & parseurs",
+  "s4.benefit": "Extraire, structurer et exploiter des données brutes. Pas d'intermédiaire pour ce que la machine peut faire seule.",
+
+  "s5.code":    "S-05",
+  "s5.title":   "Traitement documentaire",
+  "s5.benefit": "PDF, factures, formulaires, archives — transformer la masse en structure lisible et immédiatement exploitable.",
+
+  "s6.code":    "S-06",
+  "s6.title":   "Reporting & dashboards",
+  "s6.benefit": "Des indicateurs que vous comprenez sans formation, mis à jour sans intervention externe ni abonnement SaaS.",
 
   "manifeste.cta": "Lire le manifeste complet →",
 

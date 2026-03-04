@@ -437,3 +437,142 @@
 @media (min-width: 680px) {
   .axiom-conclusion { grid-column: 1 / -1; }
 }
+
+/* ── SERVICES PAGE ──────────────────────────────────────── */
+.svc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid #2a2a2a;
+  box-shadow: 5px 5px 0 var(--indigo);
+}
+@media (min-width: 520px) {
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 920px) {
+  .svc-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.svc {
+  padding: 2rem;
+  border-bottom: 1px solid #2a2a2a;
+  border-right: none;
+  background: var(--bg-2);
+  transition: background .12s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.svc::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 0;
+  background: var(--indigo);
+  transition: height .2s;
+}
+.svc:hover { background: var(--bg-3); }
+.svc:hover::before { height: 100%; }
+
+@media (min-width: 520px) {
+  .svc:nth-child(odd) { border-right: 1px solid #2a2a2a; }
+}
+@media (min-width: 920px) {
+  .svc { border-right: 1px solid #2a2a2a; }
+  .svc:nth-child(3n) { border-right: none; }
+  .svc:nth-child(n+4) { border-bottom: none; }
+}
+@media (max-width: 519px) {
+  .svc:last-child { border-bottom: none; }
+}
+@media (min-width: 520px) and (max-width: 919px) {
+  .svc:nth-last-child(-n+2) { border-bottom: none; }
+}
+
+.svc-id {
+  font-family: "Fragment Mono", monospace;
+  font-size: .94rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: .6rem;
+}
+.svc-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: .04em;
+  line-height: 1;
+  color: var(--white);
+  margin-bottom: .8rem;
+}
+.svc-benefit {
+  font-size: .94rem;
+  line-height: 1.65;
+  color: var(--gray-p);
+}
+
+/* pricing strip */
+.svc-price-card {
+  background: var(--black);
+  border: 1px solid #2a2a2a;
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  transition: background .15s, border-color .15s;
+}
+.svc-price-card:hover { background: var(--bg-2); border-color: #444; }
+.svc-price-card--featured { border-color: var(--indigo); }
+.svc-price-card--featured:hover { border-color: var(--indigo); }
+
+.svc-price-head {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+  margin-bottom: .4rem;
+}
+@media (min-width: 760px) {
+  .svc-price-head {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: .8rem;
+  }
+}
+
+.svc-price-name {
+  font-family: "Fragment Mono", monospace;
+  font-size: .94rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gray-p);
+}
+.svc-price-amount {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--white);
+}
+.svc-price-link {
+  display: inline-block;
+  margin-top: auto;
+  padding: .65rem 1.2rem;
+  border: 1px solid #444;
+  font-family: "Fragment Mono", monospace;
+  font-size: .94rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+  text-align: center;
+  transition: color .15s, background .15s, border-color .15s;
+}
+.svc-price-link:hover { background: var(--white); color: var(--black); }
+.svc-price-card--featured .svc-price-link {
+  border-color: var(--indigo);
+  background: rgba(110, 86, 207, .05);
+}
+.svc-price-card--featured .svc-price-link:hover {
+  background: var(--indigo);
+  color: var(--white);
+}
