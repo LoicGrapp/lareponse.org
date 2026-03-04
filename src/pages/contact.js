@@ -1,4 +1,6 @@
-export function Contact(){
+import { t, localePath } from '../lang.js';
+
+export function contact() {
     return `
       <div class="px-6 md:px-[10%] py-12">
         <div class="max-w-[72rem] mx-auto">
@@ -6,7 +8,7 @@ export function Contact(){
         <!-- Title -->
         <div class="pb-[24px]">
             <h1 class=" font-bold leading-none flex items-baseline gap-4 border-b-[2px] border-[var(--purple)]"> <span
-                    class="text-[112px] text-[var(--purple)] font-bebas">06</span> <span class="text-[88px] text-[var('--white')] font-bebas">CONTACT</span>
+                    class="text-[112px] text-[var(--purple)] font-bebas">06</span> <span class="text-[88px] text-[var('--white')] font-bebas">${t('contact.heading')}</span>
             </h1>
 
         </div>
@@ -19,41 +21,40 @@ export function Contact(){
 
                 <div class=" border-l-[3px]  border-[var(--purple)] pl-4 pr-4 font-mono-space">
                     <p>
-                        Pas de formulaire commercial. Décrivez simplement ce que
-                        vous voulez construire, pour qui, et dans quel délai.
+                        ${t('contact.1stparagraph')}
                     </p>
                     <p class="mt-4">
-                        Une personne lira votre message. Pas un bot, pas un
-                        script de relance.
+                        ${t('contact.2ndparagraph')}
+                        
                     </p>
                 </div>
 
                 <div class="border border-[#2a2a2a]">
 
                     <div class="p-4">
-                        <p class="text-[11px]  text-[var(--gray-p)] font-fragment uppercase text-[var(--purple)]">Délai de réponse DE RÉPONSE</p>
-                        <p class="font-mono-space">48 heures ouvrées maximum</p>
+                        <p class="text-[11px]  text-[var(--gray-p)] font-fragment uppercase text-[var(--purple)]">${t('contact.response.title')}</p>
+                        <p class="font-mono-space">${t('contact.response.body')}</p>
                     </div> 
 
                     <div class="mt-6 h-[1px] bg-[#2a2a2a] w-full"> </div>
 
                     <div class="p-4">
-                        <p class="text-[11px]  font-fragment uppercase text-[var(--purple)] ">CE QU'IL FAUT PRÉCISER</p>
-                        <p class="font-mono-space">Votre besoin, votre contexte (asso / commercial), et si vous avez une contrainte de délai</p>
+                        <p class="text-[11px]  font-fragment uppercase text-[var(--purple)] ">${t('contact.requirements.title')}</p>
+                        <p class="font-mono-space"> ${t('contact.requirements.body')}</p>
                     </div>
 
                     <div class="mt-6 h-[1px] bg-[#2a2a2a] w-full"> </div>
 
                     <div class="p-4">
-                        <p class="text-[11px] font-fragment uppercase text-[var(--purple)]">CE QUI SE PASSE ENSUITE</p>
-                        <p class="font-mono-space">Un échange pour cadrer le périmètre, puis une estimation honnête en crédits-minutes</p>
+                        <p class="text-[11px] font-fragment uppercase text-[var(--purple)]">${t('contact.response.body')}</p>
+                        <p class="font-mono-space">${t('contact.response.body')}</p>
                     </div>
 
                     <div class="mt-6 h-[1px] bg-[#2a2a2a] w-full"> </div>
 
                     <div class="p-4">
-                        <p class="text-[11px] font-fragment uppercase text-[var(--purple)]">CONFIDENTIALITÉ</p>
-                        <p class="font-mono-space">Pas de newsletter. Pas de CRM. Pas de relance automatisée.</p>
+                        <p class="text-[11px] font-fragment uppercase text-[var(--purple)]">${t('contact.privacy.title')}</p>
+                        <p class="font-mono-space">${t('contact.privacy.body')}</p>
                     </div>
 
                 </div>
