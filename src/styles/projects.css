@@ -168,7 +168,7 @@
 }
 .proj--disabled .proj-hero { filter: grayscale(60%); }
 .proj--disabled .proj-hero::after {
-  content: 'EN COURS DE CRÉATION';
+  content: attr(data-wip);
   position: absolute;
   inset: 0;
   display: flex;

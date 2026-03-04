@@ -2,7 +2,7 @@ export function Main(props = {}) {
   const { content = '' } = props;
 
   return `
-    <main class="flex-1">
+    <main id="main-content" class="flex-1">
       ${content}
     </main>
   `;

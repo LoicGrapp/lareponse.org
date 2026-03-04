@@ -160,7 +160,7 @@ export function Projects() {
 
           <!-- BADHAT — disabled -->
           <article class="proj proj--disabled" role="listitem" data-proj="badhat" aria-disabled="true">
-            <div class="proj-hero">
+            <div class="proj-hero" data-wip="${t('projects.wip')}">
               <div class="proj-hero-gradient proj-gradient-badhat"></div>
             </div>
             <div class="proj-title-bar">

@@ -1,4 +1,5 @@
 {
+  "a11y.skip":       "Skip to main content",
   "nav.home":        "Home",
   "nav.manifesto":   "Manifesto",
   "nav.method":      "Method",
@@ -212,6 +213,7 @@
   "projects.title": "PROJECTS",
   "projects.intro": "LaRéponse builds tools because reality demands them. Each project is born from a concrete problem — not a catalogue ambition. These are reusable, adaptable, transferable building blocks.",
   "projects.see":     "View project",
+  "projects.wip":     "Work in progress",
   "projects.soon":    "Coming soon",
   "projects.why":     "Why",
   "projects.forwhom": "For whom",

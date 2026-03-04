@@ -49,7 +49,7 @@
   font-size: var(--fs-xs);
   letter-spacing: .12em;
   text-transform: uppercase;
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
   padding: 0.25rem 0.75rem;
   display: inline-block;
   margin-top: auto;

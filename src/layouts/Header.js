@@ -26,6 +26,7 @@ export function Header() {
   const mBase = 'text-[16px] tracking-[.12em] uppercase transition-colors';
 
   return `
+    <a href="#main-content" class="skip-link">${t('a11y.skip')}</a>
     <header class="font-fragment md:sticky md:top-0 z-[100] bg-[#0a0a0a] border-b-2 border-[#2e2e2e]">
 
       <div class="pl-6 pr-0 md:px-[10%]">

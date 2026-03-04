@@ -8,7 +8,7 @@ export function NotFoundPage() {
         Oups&nbsp;! Cette page n'existe pas.
       </p>
 
-      <a href="/" data-link class="btn-outline anim anim-d2">Retour à l'accueil</a>
+      <a href="${localPath('/')}" data-link class="btn-outline anim anim-d2">Retour à l'accueil</a>
 
     </div>
   `;
