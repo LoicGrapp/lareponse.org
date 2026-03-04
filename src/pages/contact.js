@@ -2,17 +2,19 @@ import { t, localePath } from '../lang.js';
 
 export function contact() {
     return `
+      <div class="px-6 md:px-[10%] py-12">
+        <div class="max-w-[72rem] mx-auto">
+
         <!-- Title -->
-        <div class="pb-[24px] pl-[40px] pr-[40px]">
-        
+        <div class="pb-[24px]">
             <h1 class=" font-bold leading-none flex items-baseline gap-4 border-b-[2px] border-[var(--purple)]"> <span
                     class="text-[112px] text-[var(--purple)] font-bebas">06</span> <span class="text-[88px] text-[var('--white')] font-bebas">${t('contact.heading')}</span>
             </h1>
-            
+
         </div>
 
         <!-- Main bordered container -->
-        <div class="pl-10 pr-10 grid grid-cols-2 gap-12 bg-[var(--black)]">
+        <div class="grid grid-cols-2 gap-12 bg-[var(--black)]">
 
             <!-- LEFT SIDE -->
             <div class="space-y-10 text-[13px]  text-[var(--gray-p)]">
@@ -97,19 +99,23 @@ export function contact() {
                             class="w-full bg-transparent border-b border-[#2a2a2a] resize-none focus:outline-none focus:border-[var(--purple)]"></textarea>
                     </div>
 
+                
+
+                    <!-- Button Area -->
+                    <div class="mt-10 bg-[#151515] p-6">
+                        <button class="w-full py-4 btn-hero"> ENVOYER → </button>
+
+                        <p class="mt-4 text-[10px] text-[var(--gray-p)] text-center">
+                            PAS DE NEWSLETTER · PAS DE RELANCE · UNE PERSONNE LIRA VOTRE MESSAGE
+                        </p>
+                    </div>
                 </form>
-
-                <!-- Button Area -->
-                <div class="mt-10 bg-[#151515] p-6">
-                    <button class="w-full py-4 btn-hero"> ENVOYER → </button>
-
-                    <p class="mt-4 text-[10px] text-[var(--gray-p)] text-center">
-                        PAS DE NEWSLETTER · PAS DE RELANCE · UNE PERSONNE LIRA VOTRE MESSAGE
-                    </p>
-                </div>
 
             </div>
 
         </div>
+
+        </div>
+      </div>
     `
 }

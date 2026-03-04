@@ -132,7 +132,26 @@ class Router {
     if (app) {
       app.innerHTML = Layout({ content: html });
       this._setupMobileMenu();
+      this._runTypingAnimations();
     }
+  }
+
+  _runTypingAnimations() {
+    document.querySelectorAll('[data-typing]').forEach(el => {
+      const text = el.getAttribute('data-typing');
+      if (!text) return;
+      el.textContent = '';
+      let i = 0;
+      const tick = () => {
+        if (i < text.length) {
+          el.textContent += text[i++];
+          setTimeout(tick, 80);
+        } else {
+          el.classList.add('typing-done');
+        }
+      };
+      setTimeout(tick, 400);
+    });
   }
 
   _setupMobileMenu() {
