@@ -71,6 +71,11 @@ export function initGridPulse() {
       ctx.fill();
     }
 
+    document.querySelectorAll('.no-dots').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      ctx.clearRect(rect.left, rect.top, rect.width, rect.height);
+    });
+
     requestAnimationFrame(draw);
   }
 

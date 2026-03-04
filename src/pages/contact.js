@@ -2,7 +2,7 @@ import { t, localePath } from '../lang.js';
 
 export function Contact() {
     return `
-      <div class="px-6 md:px-[10%] py-12">
+      <div class="px-6 md:px-[10%] py-12 z-1 backdrop-blur-[2px]">
       <div class="max-w-[72rem] mx-auto">
 
         <!-- TITLE -->
@@ -50,9 +50,9 @@ export function Contact() {
 
               <div class="p-4">
                 <p class="text-[11px] font-fragment uppercase text-[var(--purple)]">
-                  ${t('contact.next.title')}
+                  ${t('contact.after.title')}
                 </p>
-                <p class="font-mono-space">${t('contact.next.body')}</p>
+                <p class="font-mono-space">${t('contact.after.body')}</p>
               </div>
 
               <div class="h-[1px] bg-[#2a2a2a] w-full"></div>
