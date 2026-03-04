@@ -19,7 +19,7 @@ LaRéponse est fondé sur une règle unique et non négociable : **ne pas mentir
 | `/about` | À propos & manifeste | 02 |
 | `/pricing` | Tarifs & méthode | 04 |
 | `/projects` | Projets internes | 05 |
-| `/contact` | Formulaire de contact | — |
+| `/contact` | Formulaire de contact | 06 |
 
 ---
 
@@ -235,15 +235,27 @@ export function ServicesPage() {
 
 **Styles** — Tailwind pour les layouts, CSS custom dans `index.css` pour les composants répétés (`.proj-*`, `.svc-*`, `.axiom-*`, etc.)
 
-**Assets** — les images sont dans `src/public/` au format `.webp`. Les chemins utilisent `import.meta.env.BASE_URL` pour fonctionner en dev et en prod :
+**Assets** — les images sont dans `src/public/` au format `.webp`. Les chemins utilisent `import.meta.env.BASE_URL`.
+
+`import.meta.env` est un objet injecté par Vite **au moment du build** — il n'a rien à voir avec un fichier `.env`. Vite détermine le mode selon la commande lancée :
+
+- `npm run dev` → Vite sert en local, `BASE_URL = "/"`
+- `npm run build` → Vite compile pour la prod, `BASE_URL = "/lareponse.org/"` (valeur de `base` dans `vite.config.js`)
 
 ```js
+// vite.config.js
+base: "/lareponse.org/"
+
+// Dans le code
 const BASE = import.meta.env.BASE_URL;
-// dev  → "/"
-// prod → "/lareponse.org/"
+
+// npm run dev   → BASE = "/"                  → src="/dashbored-projects.webp"
+// npm run build → BASE = "/lareponse.org/"    → src="/lareponse.org/dashbored-projects.webp"
 
 `<img src="${BASE}dashbored-projects.webp">`
 ```
+
+Sans ça, les images seraient cassées en production car GitHub Pages sert le site sous `/lareponse.org/` et non `/`.
 
 **Liens internes** — toujours utiliser `data-link` + `localePath()` pour que le router intercepte le clic et que la locale soit conservée :
 
