@@ -90,7 +90,7 @@ export function Pricing() {
         </div>
 
         <!-- ── SUMMARY BOXES ────────────────────────────── -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[44rem] mb-16 anim anim-d4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[44rem] mb-16 anim">
           <div class="border border-[#2a2a2a] bg-[var(--bg-2)] p-6">
             <p class="font-fragment fs-label tracking-[.18em] uppercase text-[var(--indigo)] mb-2">Projets non lucratifs</p>
             <p class="font-bebas fs-h2 tracking-[.04em] text-[var(--white)] leading-tight">Payez une fois. Validé en 30 jours. Gratuit à vie.</p>
