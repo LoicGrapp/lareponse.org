@@ -28,8 +28,8 @@ export function Header() {
   return `
     <header class="font-fragment md:sticky md:top-0 z-[100] bg-[#0a0a0a] border-b-2 border-[#2e2e2e]">
 
-      <div class="px-6 md:px-[10%]">
-        <nav class="max-w-[72rem] mx-auto h-14 flex items-stretch justify-between">
+      <div class="pl-6 pr-0 md:px-[10%]">
+        <nav class="max-w-[72rem] mx-auto h-14 flex items-stretch">
 
           <!-- Logo -->
           <a href="${localePath('/')}" data-link
@@ -73,13 +73,20 @@ export function Header() {
 
           <!-- Burger (mobile) -->
           <button id="burger" aria-label="Menu" aria-expanded="false"
-                  class="md:hidden flex items-center px-4 text-[#f0ede8]">
+                  class="md:hidden ml-auto flex items-center px-4 text-[#f0ede8] border-l border-[#2e2e2e]">
             <span class="burger-icon">
               <span class="bar bar-1"></span>
               <span class="bar bar-2"></span>
               <span class="bar bar-3"></span>
             </span>
           </button>
+
+          <!-- Contact button (mobile) -->
+          <a href="${localePath('/contact')}" data-link
+             class="md:hidden flex items-center ${mBase} text-[#f0ede8] bg-[#4F46E5] px-4 shrink-0 border-l border-[#2e2e2e] hover:bg-[#6366f1]
+                    ${activePath === '/contact' ? 'bg-[#6366f1]' : ''}">
+            ${t('nav.contact')} →
+          </a>
 
         </nav>
       </div>
@@ -97,11 +104,6 @@ export function Header() {
               ${label}
             </a>`;
         }).join('')}
-        <a href="${localePath('/contact')}" data-link
-           class="block ${mBase} text-[#f0ede8] bg-[#4F46E5] px-6 py-4 hover:bg-[#6366f1] text-center
-                  ${activePath === '/contact' ? 'bg-[#6366f1]' : ''}">
-          ${t('nav.contact')} →
-        </a>
         <a href="${switchHref}" data-link
            class="block ${mBase} text-[#C8C4BE] px-6 py-4 border-t border-[#1e1e1e] hover:text-[#f0ede8] hover:bg-[#1a1a1a]">
           ${otherLocale.toUpperCase()}

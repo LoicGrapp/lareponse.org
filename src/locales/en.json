@@ -114,5 +114,71 @@
   "pricing.exclu.3": "External APIs",
   "pricing.exclu.4": "Hosting migrations",
   "pricing.exclu.5": "Changes requested by the client",
-  "pricing.exclu.6": "New features or scope expansions"
+  "pricing.exclu.6": "New features or scope expansions",
+
+  "about.title": "ABOUT",
+
+  "about.qui.label":   "Who",
+  "about.qui.heading": "Practitioners of functional minimalism.",
+  "about.qui.p1":      "Our role is not to sell hours, but to deliver <strong>stable, transferable systems</strong>.",
+  "about.qui.p2":      "A system doesn't need to be massive to be robust. It must be clear, proportionate and governed by simple rules.",
+  "about.qui.refuse":  "We refuse:",
+  "about.qui.li1":     "fragile dependencies,",
+  "about.qui.li2":     "billing for repetition,",
+  "about.qui.li3":     "unnecessary layers that inflate quotes.",
+  "about.qui.p3":      "We believe that work well done is honoured by its <strong>durability</strong>, not by the multiplication of invoices.",
+
+  "about.quoi.label":   "What",
+  "about.quoi.heading": "What we do.",
+  "about.quoi.intro":   "We design and deploy:",
+  "about.quoi.li1":     "<strong>consistent sites, portals and platforms</strong>,",
+  "about.quoi.li2":     "tools calibrated for <strong>freelancers, associations and small structures</strong>,",
+  "about.quoi.li3":     "lean, stable architectures designed to <strong>last without hidden debt</strong>.",
+  "about.quoi.p2":      "Every deliverable ships with automated tests. Every bug is fixed once. Every fix becomes an <strong>irreversible gain</strong>.",
+
+  "about.comment.label":   "How",
+  "about.comment.heading": "How we work.",
+  "about.comment.intro":   "Our philosophy draws from <strong>BADHAT</strong>:",
+  "about.comment.li1":     "delegate each responsibility to the most efficient level (server, database, code),",
+  "about.comment.li2":     "remove all decoration, all arbitrary complexity,",
+  "about.comment.li3":     "optimise execution by respecting the logic of machines.",
+  "about.comment.p2":      "LaRéponse is its practical application:",
+  "about.comment.li4":     "<strong>never billed twice</strong> for the same work,",
+  "about.comment.li5":     "a stabilisation period of <strong>thirty days</strong>,",
+  "about.comment.li6":     "then a <strong>lifetime guarantee</strong> as long as the bug is reproducible.",
+  "about.comment.p3":      "If the test fails, we fix it. If the test passes but a problem occurs, that's a new context — and therefore new work.",
+
+  "about.pourqui.label":   "For whom",
+  "about.pourqui.heading": "Those who refuse waste.",
+  "about.pourqui.body":    "For those who want <strong>clear, proven, transferable code</strong>. For those who know that value is not measured by volume, but by the <strong>rightness that remains</strong>.",
+
+  "about.valeurs.label":   "Values",
+  "about.valeurs.heading": "The manifesto.",
+
+  "about.rule.label": "— SINGLE RULE — NON-NEGOTIABLE —",
+  "about.rule.text":  "LaRéponse is a discipline with a single, non-negotiable rule\u00a0: do not lie about complexity.",
+
+  "about.axioms.label": "The manifesto axioms",
+
+  "about.axiom1.num":  "Axiom 01 — Complexity",
+  "about.axiom1.text": "Reality is complex, and anything that claims otherwise merely <strong>displaces that complexity</strong> onto a hidden burden, a loss of agency, and power without accountability.",
+  "about.axiom2.num":  "Axiom 02 — Lying",
+  "about.axiom2.text": "That which conceals its complexity <strong>lies about itself</strong>, demanding trust rather than understanding; this is a form of coercion.",
+  "about.axiom3.num":  "Axiom 03 — Clarity",
+  "about.axiom3.text": "<strong>Clarity is not simplicity</strong>, but the truthful exposure of structure. Minimalism is not reduction, but a refusal to mask what makes a thing work.",
+  "about.axiom4.num":  "Axiom 04 — Human forms",
+  "about.axiom4.text": "Human forms accept human limits. Forms that <strong>demand adaptation</strong> — instead of meeting people where they are — export their cost.",
+  "about.axiom5.num":  "Axiom 05 — Autonomy",
+  "about.axiom5.text": "When effort is removed before understanding, <strong>autonomy collapses into dependency</strong>; ease without legibility weakens those who rely on it.",
+  "about.axiom6.num":  "Axiom 06 — Transmission",
+  "about.axiom6.text": "Transmission that smooths structure produces conformity, not understanding; <strong>understanding requires resistance.</strong>",
+  "about.axiom7.num":  "Axiom 07 — Power",
+  "about.axiom7.text": "<strong>Power grows where structure disappears</strong>; making structure visible then becomes an act of resistance.",
+  "about.axiom8.num":  "Axiom 08 — Responsibility",
+  "about.axiom8.text": "Those who shape things are responsible not only for outcomes, but for <strong>what they hide</strong>; there is no neutrality where form directs behaviour.",
+
+  "about.conclusion.num":  "Conclusion",
+  "about.conclusion.text": "What is visible can be questioned — and what can be questioned can be changed.",
+
+  "about.cta.pricing": "See pricing →"
 }
