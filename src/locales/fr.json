@@ -42,5 +42,18 @@
   "cta.heading": "PRÊT À CONSTRUIRE ?",
   "cta.btn":     "Décrire mon besoin →",
 
-  "footer.motto": "Ce qui est visible peut être questionné."
+  "footer.motto": "Ce qui est visible peut être questionné.",
+  "contact.heading" :" CONTACT",
+  "contact.1stparagraph": "Pas de formulaire commercial. Décrivez simplement ce que vous voulez construire, pour qui, et dans quel délai.",
+  "contact.2stparagraph":"Une personne lira votre message. Pas un bot, pas unscript de relance.",
+  "contact.response.title": "Délai de réponse",
+  "contact.response.body": "48 heures ouvrées maximum",
+  "contact.requirements.title": "CE QU'IL FAUT PRÉCISER",
+  "contact.requirements.body": "Votre besoin, votre contexte (asso / commercial), et si vous avez une contrainte de délai",
+  "contact.after.title" :" CE QUI SE PASSE ENSUITE",
+  "contact.after.body": "Un échange pour cadrer le périmètre, puis une estimation honnête en crédits-minutes", 
+  "contact.privacy.title": " CONFIDENTIALITÉ",
+  "contact.privacy.body":" Pas de newsletter. Pas de CRM. Pas de relance automatisée."
+  
+
 }

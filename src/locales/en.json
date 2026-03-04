@@ -42,5 +42,15 @@
   "cta.heading": "READY TO BUILD?",
   "cta.btn":     "Describe my need →",
 
-  "footer.motto": "What is visible can be questioned."
+  "footer.motto": "What is visible can be questioned.",
+  "contact.heading": "CONTACT",
+  "contact.2stparagraph": "A human will read your message. Not a bot, not an automated script.",
+  "contact.response.title": "Response time",
+  "contact.response.body" :"Maximum 48 business hours",
+  "contact.requirements.title": "What to mention",
+  "contact.requirements.body": "Your need, your context (nonprofit / commercial), and whether you have a deadline constraint.",
+  "contact.after.title": "What happens next",
+  "contact.after.body" :" A quick exchange to define the scope, then an honest estimate in credit‑minutes.",
+  "contact.privacy.title": "Privacy",
+  "contact.privacy.body": " No newsletter. No CRM. No automated follow‑ups."
 }
