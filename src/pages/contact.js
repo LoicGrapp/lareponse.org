@@ -1,15 +1,18 @@
-export function contact(){
+export function Contact(){
     return `
+      <div class="px-6 md:px-[10%] py-12">
+        <div class="max-w-[72rem] mx-auto">
+
         <!-- Title -->
-        <div class="pb-[24px] pl-[40px] pr-[40px]">
+        <div class="pb-[24px]">
             <h1 class=" font-bold leading-none flex items-baseline gap-4 border-b-[2px] border-[var(--purple)]"> <span
                     class="text-[112px] text-[var(--purple)] font-bebas">06</span> <span class="text-[88px] text-[var('--white')] font-bebas">CONTACT</span>
             </h1>
-            
+
         </div>
 
         <!-- Main bordered container -->
-        <div class="pl-10 pr-10 grid grid-cols-2 gap-12 bg-[var(--black)]">
+        <div class="grid grid-cols-2 gap-12 bg-[var(--black)]">
 
             <!-- LEFT SIDE -->
             <div class="space-y-10 text-[13px]  text-[var(--gray-p)]">
@@ -110,5 +113,8 @@ export function contact(){
             </div>
 
         </div>
+
+        </div>
+      </div>
     `
 }
