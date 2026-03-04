@@ -2,6 +2,7 @@
 
 /* Variables globales (couleurs) */
 :root {
+  /* Couleurs */
   --black:        #0a0a0a;
   --bg-2:         #111111;
   --bg-3:         #1a1a1a;
@@ -13,6 +14,15 @@
   --indigo-dark:  #4F46E5;
   --indigo-light: #A5B4FC;
   --mint:         #34D399;
+
+  /* Typographie */
+  --fs-h1:         clamp(5rem, 16vw, 14rem);
+  --fs-h2:         clamp(1.6rem, 3vw, 2.2rem);
+  --fs-cta:        clamp(1.4rem, 3vw, 2rem);
+  --fs-card-title: 1.5rem;
+  --fs-body:       0.9375rem; /* 15px */
+  --fs-label:      0.78rem;
+  --fs-xs:         0.72rem;
 }
 
 @layer base {
@@ -56,13 +66,22 @@
     -webkit-text-stroke: 2px var(--white);
     color: transparent;
   }
+
+  /* Échelle typographique */
+  .fs-h1         { font-size: var(--fs-h1); line-height: 0.86; letter-spacing: -0.01em; }
+  .fs-h2         { font-size: var(--fs-h2); }
+  .fs-cta        { font-size: var(--fs-cta); }
+  .fs-card-title { font-size: var(--fs-card-title); line-height: 1; }
+  .fs-body       { font-size: var(--fs-body); line-height: 1.7; }
+  .fs-label      { font-size: var(--fs-label); }
+  .fs-xs         { font-size: var(--fs-xs); }
 }
 
 /* ── BUTTONS BRUTALISTES ─────────────────────────────── */
 .btn-hero {
   font-family: "Space Mono", monospace;
   font-weight: 700;
-  font-size: .82rem;
+  font-size: 15px;
   letter-spacing: .08em;
   text-transform: uppercase;
   padding: .85rem 1.6rem;
@@ -87,7 +106,7 @@
 .btn-outline {
   font-family: "Space Mono", monospace;
   font-weight: 700;
-  font-size: .82rem;
+  font-size: 15px;
   letter-spacing: .08em;
   text-transform: uppercase;
   padding: .85rem 1.6rem;

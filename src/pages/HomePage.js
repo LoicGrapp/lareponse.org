@@ -12,14 +12,12 @@ export function HomePage() {
 
       <div class="max-w-[72rem] mx-auto relative">
 
-        <p class="font-fragment text-[.78rem] tracking-[.22em] uppercase text-[#818CF8] flex items-center gap-4 mb-8 anim"
-           style="font-size:.78rem">
+        <p class="font-fragment fs-label tracking-[.22em] uppercase text-[#818CF8] flex items-center gap-4 mb-8 anim">
           <span class="block w-10 h-px bg-[#818CF8] shrink-0"></span>
           <span data-typing="${t('hero.eyebrow')}"></span>
         </p>
 
-        <h1 class="font-bebas leading-[.86] tracking-[-0.01em] mb-12 max-w-[12ch] anim anim-d1"
-            style="font-size:clamp(5rem,16vw,14rem);line-height:.86;letter-spacing:-.01em">
+        <h1 class="font-bebas fs-h1 mb-12 max-w-[12ch] anim anim-d1">
           ${t('hero.title.1')}<br>
           <span class="text-[#818CF8]">${t('hero.title.2')}</span><br>
           <span class="text-outlined">${t('hero.title.3')}</span><br>
@@ -28,8 +26,7 @@ export function HomePage() {
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-          <p class="font-mono-space text-[#C8C4BE] border-l-[3px] border-[#818CF8] pl-5 max-w-[34ch] anim anim-d2"
-             style="font-size:.95rem;line-height:1.75">
+          <p class="font-mono-space fs-body text-[#C8C4BE] border-l-[3px] border-[#818CF8] pl-5 max-w-[34ch] anim anim-d2">
             ${t('hero.sub')}<br><br>${t('hero.sub2')}
           </p>
 
@@ -41,16 +38,16 @@ export function HomePage() {
             </div>
 
             <div class="border border-[#242424] bg-[#111111]" role="list">
-              <div class="flex items-center gap-3 px-4 py-3 border-b border-[#1e1e1e] font-fragment text-[.78rem] tracking-[.1em] uppercase text-[#C8C4BE]" role="listitem" style="font-size:.78rem">
+              <div class="flex items-center gap-3 px-4 py-3 border-b border-[#1e1e1e] font-fragment fs-body tracking-[.1em] uppercase text-[#C8C4BE]" role="listitem">
                 <em class="text-[#818CF8] font-bold shrink-0 not-italic">✓</em><span>${t('proof.1')}</span>
               </div>
-              <div class="flex items-center gap-3 px-4 py-3 border-b border-[#1e1e1e] font-fragment text-[.78rem] tracking-[.1em] uppercase text-[#C8C4BE]" role="listitem" style="font-size:.78rem">
+              <div class="flex items-center gap-3 px-4 py-3 border-b border-[#1e1e1e] font-fragment fs-body tracking-[.1em] uppercase text-[#C8C4BE]" role="listitem">
                 <em class="text-[#818CF8] font-bold shrink-0 not-italic">✓</em><span>${t('proof.2')}</span>
               </div>
-              <div class="flex items-center gap-3 px-4 py-3 border-b border-[#1e1e1e] font-fragment text-[.78rem] tracking-[.1em] uppercase text-[#C8C4BE]" role="listitem" style="font-size:.78rem">
+              <div class="flex items-center gap-3 px-4 py-3 border-b border-[#1e1e1e] font-fragment fs-bodytracking-[.1em] uppercase text-[#C8C4BE]" role="listitem">
                 <em class="text-[#818CF8] font-bold shrink-0 not-italic">✓</em><span>${t('proof.3')}</span>
               </div>
-              <div class="flex items-center gap-3 px-4 py-3 font-fragment text-[.78rem] tracking-[.1em] uppercase text-[#C8C4BE]" role="listitem" style="font-size:.78rem">
+              <div class="flex items-center gap-3 px-4 py-3 font-fragment fs-body tracking-[.1em] uppercase text-[#C8C4BE]" role="listitem">
                 <em class="text-[#818CF8] font-bold shrink-0 not-italic">✓</em><span>${t('proof.4')}</span>
               </div>
             </div>
@@ -64,51 +61,50 @@ export function HomePage() {
     <section class="py-16 px-6 md:px-[10%] anim">
       <div class="max-w-[72rem] mx-auto">
 
-      <h2 class="font-bebas tracking-[.04em] text-[#f0ede8] mb-6 anim"
-          style="font-size:clamp(1.6rem,3vw,2.2rem)">
+      <h2 class="font-bebas fs-h2 tracking-[.04em] text-[#f0ede8] mb-6 anim">
         ${t('services.heading')}
       </h2>
 
       <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-3 mb-8 anim anim-d1">
 
         <div class="group relative border border-[#2a2a2a] bg-[#0c0c0c] overflow-hidden transition-colors duration-150 hover:border-[#818CF8]">
-          <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment text-[.72rem] text-[#C8C4BE] opacity-60" style="font-size:.72rem">
+          <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment fs-xs text-[#C8C4BE] opacity-60">
             <span class="text-[#818CF8] font-bold">$</span><span>~/services/s01</span>
           </div>
           <div class="p-6">
-            <p class="font-fragment tracking-[.22em] uppercase text-[#818CF8] mb-2" style="font-size:.75rem">${t('s1.code')}</p>
-            <p class="font-bebas tracking-[.04em] leading-none text-[#f0ede8] mb-2" style="font-size:1.5rem;line-height:1">${t('s1.title')}</p>
-            <p class="text-[#C8C4BE]" style="font-size:.83rem;line-height:1.65">${t('s1.body')}</p>
+            <p class="font-fragment fs-label tracking-[.22em] uppercase text-[#818CF8] mb-2">${t('s1.code')}</p>
+            <p class="font-bebas fs-card-title tracking-[.04em] text-[#f0ede8] mb-2">${t('s1.title')}</p>
+            <p class="fs-body text-[#C8C4BE]">${t('s1.body')}</p>
           </div>
-          <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0" style="font-size:.72rem">
+          <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment fs-xs text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0">
             → deployed: zero-debt stack
           </div>
         </div>
 
         <div class="group relative border border-[#2a2a2a] bg-[#0c0c0c] overflow-hidden transition-colors duration-150 hover:border-[#818CF8]">
-          <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment text-[.72rem] text-[#C8C4BE] opacity-60" style="font-size:.72rem">
+          <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment fs-xs text-[#C8C4BE] opacity-60">
             <span class="text-[#818CF8] font-bold">$</span><span>~/services/s02</span>
           </div>
           <div class="p-6">
-            <p class="font-fragment tracking-[.22em] uppercase text-[#818CF8] mb-2" style="font-size:.75rem">${t('s2.code')}</p>
-            <p class="font-bebas tracking-[.04em] leading-none text-[#f0ede8] mb-2" style="font-size:1.5rem;line-height:1">${t('s2.title')}</p>
-            <p class="text-[#C8C4BE]" style="font-size:.83rem;line-height:1.65">${t('s2.body')}</p>
+            <p class="font-fragment fs-label tracking-[.22em] uppercase text-[#818CF8] mb-2">${t('s2.code')}</p>
+            <p class="font-bebas fs-card-title tracking-[.04em] text-[#f0ede8] mb-2">${t('s2.title')}</p>
+            <p class="fs-body text-[#C8C4BE]">${t('s2.body')}</p>
           </div>
-          <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0" style="font-size:.72rem">
+          <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment fs-xs text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0">
             → built: custom tooling
           </div>
         </div>
 
         <div class="group relative border border-[#2a2a2a] bg-[#0c0c0c] overflow-hidden transition-colors duration-150 hover:border-[#818CF8]">
-          <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment text-[.72rem] text-[#C8C4BE] opacity-60" style="font-size:.72rem">
+          <div class="flex items-center gap-2 px-4 py-2 bg-[#080808] border-b border-[#1a1a1a] font-fragment fs-xs text-[#C8C4BE] opacity-60">
             <span class="text-[#818CF8] font-bold">$</span><span>~/services/s03</span>
           </div>
           <div class="p-6">
-            <p class="font-fragment tracking-[.22em] uppercase text-[#818CF8] mb-2" style="font-size:.75rem">${t('s3.code')}</p>
-            <p class="font-bebas tracking-[.04em] leading-none text-[#f0ede8] mb-2" style="font-size:1.5rem;line-height:1">${t('s3.title')}</p>
-            <p class="text-[#C8C4BE]" style="font-size:.83rem;line-height:1.65">${t('s3.body')}</p>
+            <p class="font-fragment fs-label tracking-[.22em] uppercase text-[#818CF8] mb-2">${t('s3.code')}</p>
+            <p class="font-bebas fs-card-title tracking-[.04em] text-[#f0ede8] mb-2">${t('s3.title')}</p>
+            <p class="fs-body text-[#C8C4BE]">${t('s3.body')}</p>
           </div>
-          <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0" style="font-size:.72rem">
+          <div class="absolute bottom-0 inset-x-0 px-4 py-2 font-fragment fs-xs text-[#34D399] bg-[rgba(125,100,255,.06)] opacity-0 translate-y-full transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0">
             → running: stable pipeline
           </div>
         </div>
@@ -144,8 +140,7 @@ export function HomePage() {
       </div>
 
       <a href="${localePath('/manifeste')}" data-link
-         class="font-fragment tracking-[.12em] uppercase text-[#818CF8] inline-block mt-4 hover:text-[#A5B4FC] transition-colors anim anim-d1"
-         style="font-size:.75rem">
+         class="font-fragment fs-label tracking-[.12em] uppercase text-[#818CF8] inline-block mt-4 hover:text-[#A5B4FC] transition-colors anim anim-d1">
         ${t('manifeste.cta')}
       </a>
 
@@ -155,7 +150,7 @@ export function HomePage() {
     <!-- ── CLOSING CTA ───────────────────────────────────── -->
     <section class="py-16 px-6 md:px-[10%] text-center anim">
       <div class="max-w-[72rem] mx-auto">
-        <p class="font-bebas tracking-[.04em] text-[#f0ede8] mb-4" style="font-size:clamp(1.4rem,3vw,2rem)">
+        <p class="font-bebas fs-cta tracking-[.04em] text-[#f0ede8] mb-4">
           ${t('cta.heading')}
         </p>
         <a href="${localePath('/contact')}" data-link class="btn-hero">${t('cta.btn')}</a>
