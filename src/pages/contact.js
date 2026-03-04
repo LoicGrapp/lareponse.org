@@ -2,120 +2,130 @@ import { t, localePath } from '../lang.js';
 
 export function Contact() {
     return `
-      <div class="px-6 md:px-[10%] py-12">
-        <div class="max-w-[72rem] mx-auto">
+      <div className="px-6 md:px-[10%] py-12">
+      <div className="max-w-[72rem] mx-auto">
 
-        <!-- Title -->
-        <div class="pb-[24px]">
-            <h1 class=" font-bold leading-none flex items-baseline gap-4 border-b-[2px] border-[var(--purple)]"> <span
-                    class="text-[112px] text-[var(--purple)] font-bebas">06</span> <span class="text-[88px] text-[var('--white')] font-bebas">${t('contact.heading')}</span>
-            </h1>
-
+        {/* TITLE */}
+        <div className="pb-[24px]">
+          <h1 className="font-bold leading-none flex items-baseline gap-4 border-b-2 border-[var(--purple)]">
+            <span className="text-[72px] md:text-[112px] text-[var(--purple)] font-bebas">
+              06
+            </span>
+            <span className="text-[48px] md:text-[88px] text-[var(--white)] font-bebas">
+              ${t('contact.heading')}
+            </span>
+          </h1>
         </div>
 
-        <!-- Main bordered container -->
-        <div class="grid grid-cols-2 gap-12 bg-[var(--black)]">
+        {/* MAIN GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-[var(--black)]">
 
-            <!-- LEFT SIDE -->
-            <div class="space-y-10 text-[13px]  text-[var(--gray-p)]">
+          {/* LEFT SIDE */}
+          <div className="space-y-10 text-[13px] text-[var(--gray-p)]">
 
-                <div class=" border-l-[3px]  border-[var(--purple)] pl-4 pr-4 font-mono-space">
-                    <p>
-                        ${t('contact.1stparagraph')}
-                    </p>
-                    <p class="mt-4">
-                        ${t('contact.2ndparagraph')}
-                        
-                    </p>
-                </div>
-
-                <div class="border border-[#2a2a2a]">
-
-                    <div class="p-4">
-                        <p class="text-[11px]  text-[var(--gray-p)] font-fragment uppercase text-[var(--purple)]">${t('contact.response.title')}</p>
-                        <p class="font-mono-space">${t('contact.response.body')}</p>
-                    </div> 
-
-                    <div class="mt-6 h-[1px] bg-[#2a2a2a] w-full"> </div>
-
-                    <div class="p-4">
-                        <p class="text-[11px]  font-fragment uppercase text-[var(--purple)] ">${t('contact.requirements.title')}</p>
-                        <p class="font-mono-space"> ${t('contact.requirements.body')}</p>
-                    </div>
-
-                    <div class="mt-6 h-[1px] bg-[#2a2a2a] w-full"> </div>
-
-                    <div class="p-4">
-                        <p class="text-[11px] font-fragment uppercase text-[var(--purple)]">${t('contact.response.body')}</p>
-                        <p class="font-mono-space">${t('contact.response.body')}</p>
-                    </div>
-
-                    <div class="mt-6 h-[1px] bg-[#2a2a2a] w-full"> </div>
-
-                    <div class="p-4">
-                        <p class="text-[11px] font-fragment uppercase text-[var(--purple)]">${t('contact.privacy.title')}</p>
-                        <p class="font-mono-space">${t('contact.privacy.body')}</p>
-                    </div>
-
-                </div>
+            <div className="border-l-[3px] border-[var(--purple)] pl-4 pr-4 font-mono-space">
+              <p>${t('contact.1stparagraph')}</p>
+              <p className="mt-4">${t('contact.2ndparagraph')}</p>
             </div>
 
-            <!-- RIGHT SIDE FORM -->
-            <div class="flex flex-col justify-between border-[1px] border-[#2a2a2a] p-5 bg-[#151515] shadow-[5px_5px_0_var(--purple)]">
+            <div className="border border-[#2a2a2a] rounded-lg overflow-hidden">
 
-                <form class="space-y-8 text-[13px]">
+              <div className="p-4">
+                <p className="text-[11px] font-fragment uppercase text-[var(--purple)]">
+                  ${t('contact.response.title')}
+                </p>
+                <p className="font-mono-space">${t('contact.response.body')}</p>
+              </div>
 
-                    <div>
-                        <label class="block text-[11px]  text-[var(--purple)] mb-2 font-fragment">
-                            VOTRE NOM
-                        </label>
-                        <input type="text" placeholder="Prénom Nom"
-                            class="w-full bg-transparent border-b border-[#2a2a2a] pb-2 focus:outline-none focus:border-[var(--purple)]" />
-                    </div>
+              <div className="h-[1px] bg-[#2a2a2a] w-full" />
 
-                    <div>
-                        <label class="block text-[11px]  text-[var(--purple)] mb-2 font-fragment">
-                            EMAIL
-                        </label>
-                        <input type="email" placeholder="vous@domaine.fr"
-                            class="w-full bg-transparent border-b border-[#2a2a2a] pb-2 focus:outline-none focus:border-[var(--purple)]" />
-                    </div>
+              <div className="p-4">
+                <p className="text-[11px] font-fragment uppercase text-[var(--purple)]">
+                  ${t('contact.requirements.title')}
+                </p>
+                <p className="font-mono-space">${t('contact.requirements.body')}</p>
+              </div>
 
-                    <div>
-                        <label class="block text-[11px]  text-[var(--purple)] mb-2 font-fragment">
-                            TYPE DE PROJET
-                        </label>
-                        <select
-                            class="w-full bg-transparent border-b border-[#2a2a2a] pb-2 focus:outline-none focus:border-[var(--purple)]">
-                            <option>— Choisir —</option>
-                        </select>
-                    </div>
+              <div className="h-[1px] bg-[#2a2a2a] w-full" />
 
-                    <div>
-                        <label class="block text-[11px]  text-[var(--purple)]  font-fragment">
-                            VOTRE BESOIN
-                        </label>
-                        <textarea rows="3" placeholder="Ce que vous voulez construire, pour qui, dans quel délai..."
-                            class="w-full bg-transparent border-b border-[#2a2a2a] resize-none focus:outline-none focus:border-[var(--purple)]"></textarea>
-                    </div>
+              <div className="p-4">
+                <p className="text-[11px] font-fragment uppercase text-[var(--purple)]">
+                  ${t('contact.next.title')}
+                </p>
+                <p className="font-mono-space">${t('contact.next.body')}</p>
+              </div>
 
-                
+              <div className="h-[1px] bg-[#2a2a2a] w-full" />
 
-                    <!-- Button Area -->
-                    <div class="mt-10 bg-[#151515] p-6">
-                        <button class="w-full py-4 btn-hero"> ENVOYER → </button>
-
-                        <p class="mt-4 text-[10px] text-[var(--gray-p)] text-center">
-                            PAS DE NEWSLETTER · PAS DE RELANCE · UNE PERSONNE LIRA VOTRE MESSAGE
-                        </p>
-                    </div>
-                </form>
+              <div className="p-4">
+                <p className="text-[11px] font-fragment uppercase text-[var(--purple)]">
+                  ${t('contact.privacy.title')}
+                </p>
+                <p className="font-mono-space">${t('contact.privacy.body')}</p>
+              </div>
 
             </div>
+          </div>
 
-        </div>
+          {/* RIGHT SIDE FORM */}
+          <div className="flex flex-col justify-between border border-[#2a2a2a] p-5 bg-[#151515] shadow-[5px_5px_0_var(--purple)] rounded-lg">
 
+            <form className="space-y-8 text-[13px]">
+
+              <div>
+                <label className="block text-[11px] text-[var(--purple)] mb-2 font-fragment">
+                  VOTRE NOM
+                </label>
+                <input
+                  type="text"
+                  placeholder="Prénom Nom"
+                  className="w-full bg-transparent border-b border-[#2a2a2a] pb-2 focus:outline-none focus:border-[var(--purple)]"
+                />
+              </div>
+
+              <div>
+                <label className="block text-[11px] text-[var(--purple)] mb-2 font-fragment">
+                  EMAIL
+                </label>
+                <input
+                  type="email"
+                  placeholder="vous@domaine.fr"
+                  className="w-full bg-transparent border-b border-[#2a2a2a] pb-2 focus:outline-none focus:border-[var(--purple)]"
+                />
+              </div>
+
+              <div>
+                <label className="block text-[11px] text-[var(--purple)] mb-2 font-fragment">
+                  TYPE DE PROJET
+                </label>
+                <select className="w-full bg-transparent border-b border-[#2a2a2a] pb-2 focus:outline-none focus:border-[var(--purple)]">
+                  <option>- Choisir -</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-[11px] text-[var(--purple)] mb-2 font-fragment">
+                  VOTRE BESOIN
+                </label>
+                <textarea
+                  rows="3"
+                  placeholder="Ce que vous voulez construire, pour qui, dans quel délai..."
+                  className="w-full bg-transparent border-b border-[#2a2a2a] resize-none focus:outline-none focus:border-[var(--purple)]"
+                />
+              </div>
+
+            </form>
+
+            <div className="mt-10 bg-[#151515] p-6">
+              <button className="w-full py-4 btn-hero">ENVOYER →</button>
+              <p className="mt-4 text-[10px] text-[var(--gray-p)] text-center">
+                PAS DE NEWSLETTER. PAS DE RELANCE. UNE PERSONNE LIRA VOTRE MESSAGE.
+              </p>
+            </div>
+
+          </div>
         </div>
       </div>
+    </div>
     `
 }
