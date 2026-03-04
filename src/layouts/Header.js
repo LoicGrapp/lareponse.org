@@ -62,7 +62,7 @@ export function Header() {
           <a href="${localePath('/contact')}" data-link
              class="hidden md:flex items-center ${dBase} text-[#f0ede8] bg-[#4F46E5] px-6 hover:bg-[#6366f1] shrink-0 border-l border-[#2e2e2e]
                     ${activePath === '/contact' ? 'bg-[#6366f1]' : ''}">
-            ${t('nav.contact')} →
+            ${t('nav.contact')}
           </a>
 
           <!-- Language switcher (desktop) -->

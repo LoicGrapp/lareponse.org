@@ -57,7 +57,7 @@ export function Contact() {
 
             <div class="field field-stretch">
               <label for="msg">${t('contact.form.label')}</label>
-              <textarea id="msg" name="message" style="flex:1"
+              <textarea id="msg" name="message"
                 placeholder="${t('contact.form.placeholder')}" required></textarea>
             </div>
 
@@ -67,7 +67,7 @@ export function Contact() {
 
             <div class="form-submit">
               <p class="coord-reminder">${t('contact.form.coords')}</p>
-              <button type="submit" class="btn-hero" style="width:100%">
+              <button type="submit" class="btn-hero">
                 ${t('contact.form.submit')}
               </button>
               <p class="reassure">${t('contact.form.reassure')}</p>

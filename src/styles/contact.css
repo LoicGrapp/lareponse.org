@@ -1,0 +1,151 @@
+/* ═══════════════════════════════════════════════════════════════
+   PAGE CONTACT
+   Layout deux colonnes : infos pratiques + formulaire
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Layout principal */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 860px) {
+  .contact-layout {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+/* Note d'introduction avec bordure gauche */
+.contact-note {
+  font-size: .94rem;
+  line-height: 1.75;
+  color: var(--gray-p);
+  border-left: 3px solid var(--indigo);
+  padding-left: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Bloc d'informations pratiques (délai, disponibilité…) */
+.contact-facts {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #2a2a2a;
+}
+.fact {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.fact:last-child { border-bottom: none; }
+.fact-lbl {
+  font-family: "Fragment Mono", monospace;
+  font-size: .94rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--indigo);
+}
+.fact-val {
+  font-size: .94rem;
+  color: var(--gray-p);
+  line-height: 1.5;
+}
+
+/* Formulaire de contact */
+.contact-form {
+  border: 1px solid #2a2a2a;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 0 var(--indigo);
+  height: 100%;
+}
+.contact-details {
+  padding: 1.2rem;
+  font-family: "Fragment Mono", monospace;
+  font-size: .85rem;
+  color: var(--white);
+  line-height: 1.6;
+  border-bottom: 1px solid #2a2a2a;
+}
+.contact-details p { margin: 0; }
+
+/* Colonne gauche du layout (note + facts) */
+.contact-left { display: flex; flex-direction: column; }
+
+/* Champs du formulaire */
+.field {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-2);
+  border-bottom: 1px solid #2a2a2a;
+}
+.field-stretch { flex: 1; }
+.field label {
+  font-family: "Fragment Mono", monospace;
+  font-size: .94rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  padding: .7rem 1.2rem .2rem;
+  color: var(--indigo);
+  display: block;
+}
+.field input,
+.field textarea,
+.field select {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-family: "Fragment Mono", monospace;
+  font-size: .94rem;
+  padding: .3rem 1.2rem .8rem;
+  outline: none;
+  width: 100%;
+  resize: vertical;
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* Le textarea s'étire pour remplir le champ (.field-stretch) */
+.field-stretch textarea { flex: 1; }
+
+.field input::placeholder,
+.field textarea::placeholder { opacity: .3; color: var(--gray-p); }
+.field input:focus,
+.field textarea:focus,
+.field select:focus { background: var(--bg-3); }
+
+/* Bouton submit pleine largeur */
+.form-submit .btn-hero { width: 100%; }
+
+/* Pied de formulaire avec bouton d'envoi */
+.form-submit {
+  padding: 1.2rem;
+  border-top: 1px solid #2a2a2a;
+  background: var(--bg-3);
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.coord-reminder {
+  font-family: "Fragment Mono", monospace;
+  font-size: .75rem;
+  color: var(--gray-p);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 0;
+}
+
+/* Texte de réassurance volontairement discret */
+.reassure {
+  font-family: "Fragment Mono", monospace;
+  font-size: .75rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #444;
+  text-align: center;
+}
+
+/* Champ honeypot anti-spam (caché visuellement) */
+.honeypot { display: none; }

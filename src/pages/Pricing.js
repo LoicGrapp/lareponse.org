@@ -21,59 +21,44 @@ export function Pricing() {
         <!-- ── TARIF CARDS ──────────────────────────────── -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10 anim anim-d2" role="list" aria-label="${t('pricing.grid.label')}">
 
-          <!-- Coup de pouce -->
-          <div class="flex flex-col gap-2 border border-[#2a2a2a] bg-[var(--bg-2)] p-6 hover:bg-[var(--bg-3)] transition-colors" role="listitem">
-            <p class="font-fragment fs-label tracking-[.18em] uppercase text-[var(--gray-p)]">${t('pricing.c1.name')}</p>
+          <div class="price-card" role="listitem">
+            <p class="price-card-name">${t('pricing.c1.name')}</p>
             <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--mint)]">37 €/h</p>
-            <p class="fs-body text-[var(--gray-p)] leading-snug">${t('pricing.c1.desc')}</p>
-            <div class="mt-auto pt-3">
-              <span class="font-fragment fs-xs tracking-[.12em] uppercase text-[var(--mint)] border border-[var(--mint)] px-3 py-1">${t('pricing.c1.badge')}</span>
-            </div>
+            <p class="price-card-desc">${t('pricing.c1.desc')}</p>
+            <span class="price-card-badge text-[var(--mint)]">${t('pricing.c1.badge')}</span>
           </div>
 
-          <!-- Standard (featured) -->
-          <div class="flex flex-col gap-2 border-2 border-[var(--white)] bg-[var(--bg-3)] p-6 hover:bg-[#222] transition-colors" role="listitem">
-            <p class="font-fragment fs-label tracking-[.18em] uppercase text-[var(--gray-p)]">${t('pricing.c2.name')}</p>
+          <div class="price-card price-card--white" role="listitem">
+            <p class="price-card-name">${t('pricing.c2.name')}</p>
             <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)]">73 €/h</p>
-            <p class="fs-body text-[var(--gray-p)] leading-snug">${t('pricing.c2.desc')}</p>
-            <div class="mt-auto pt-3">
-              <span class="font-fragment fs-xs tracking-[.12em] uppercase text-[var(--white)] border border-[var(--white)] px-3 py-1">${t('pricing.c2.badge')}</span>
-            </div>
+            <p class="price-card-desc">${t('pricing.c2.desc')}</p>
+            <span class="price-card-badge text-[var(--white)]">${t('pricing.c2.badge')}</span>
           </div>
 
-          <!-- Étendu -->
-          <div class="flex flex-col gap-2 border border-[#2a2a2a] bg-[var(--bg-2)] p-6 hover:bg-[var(--bg-3)] transition-colors" role="listitem">
-            <p class="font-fragment fs-label tracking-[.18em] uppercase text-[var(--gray-p)]">${t('pricing.c3.name')}</p>
+          <div class="price-card" role="listitem">
+            <p class="price-card-name">${t('pricing.c3.name')}</p>
             <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--indigo)]">96 €/h</p>
-            <p class="fs-body text-[var(--gray-p)] leading-snug">${t('pricing.c3.desc')}</p>
-            <div class="mt-auto pt-3">
-              <span class="font-fragment fs-xs tracking-[.12em] uppercase text-[var(--indigo)] border border-[var(--indigo)] px-3 py-1">${t('pricing.c3.badge')}</span>
-            </div>
+            <p class="price-card-desc">${t('pricing.c3.desc')}</p>
+            <span class="price-card-badge text-[var(--indigo)]">${t('pricing.c3.badge')}</span>
           </div>
 
-          <!-- Urgence -->
-          <div class="flex flex-col gap-2 border-2 border-[var(--indigo)] bg-[var(--bg-2)] p-6 hover:bg-[var(--bg-3)] transition-colors" role="listitem">
-            <p class="font-fragment fs-label tracking-[.18em] uppercase text-[var(--gray-p)]">${t('pricing.c4.name')}</p>
+          <div class="price-card price-card--indigo" role="listitem">
+            <p class="price-card-name">${t('pricing.c4.name')}</p>
             <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--indigo)]">127 €/h</p>
-            <p class="fs-body text-[var(--gray-p)] leading-snug">${t('pricing.c4.desc')}</p>
-            <div class="mt-auto pt-3">
-              <span class="font-fragment fs-xs tracking-[.12em] uppercase text-[var(--indigo)] border border-[var(--indigo)] px-3 py-1">${t('pricing.c4.badge')}</span>
-            </div>
+            <p class="price-card-desc">${t('pricing.c4.desc')}</p>
+            <span class="price-card-badge text-[var(--indigo)]">${t('pricing.c4.badge')}</span>
           </div>
 
-          <!-- Vacances -->
-          <div class="flex flex-col gap-2 border border-[#333] bg-[var(--black)] p-6 hover:bg-[var(--bg-2)] transition-colors" role="listitem">
-            <p class="font-fragment fs-label tracking-[.18em] uppercase text-[var(--gray-p)]">${t('pricing.c5.name')}</p>
+          <div class="price-card price-card--dark" role="listitem">
+            <p class="price-card-name">${t('pricing.c5.name')}</p>
             <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--indigo)]">301 €/h</p>
-            <p class="fs-body text-[var(--gray-p)] leading-snug max-w-[36rem]">${t('pricing.c5.desc')}</p>
-            <div class="mt-auto pt-3">
-              <span class="font-fragment fs-xs tracking-[.12em] uppercase text-[var(--indigo)] border border-[var(--indigo)] px-3 py-1">${t('pricing.c5.badge')}</span>
-            </div>
+            <p class="price-card-desc">${t('pricing.c5.desc')}</p>
+            <span class="price-card-badge text-[var(--indigo)]">${t('pricing.c5.badge')}</span>
           </div>
 
         </div>
 
-        <hr class="border-none border-t border-[#1e1e1e] my-10">
+        <hr class="border-t border-[var(--border-subtle)] my-10">
 
         <!-- ── PROJETS GÉNÉRATEURS DE REVENUS ──────────── -->
         <div class="border-2 border-[var(--indigo)] max-w-[48rem] bg-[var(--bg-2)] mb-10 anim anim-d3">
@@ -91,85 +76,72 @@ export function Pricing() {
 
         <!-- ── SUMMARY BOXES ────────────────────────────── -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[44rem] mb-16 anim">
-          <div class="border border-[#2a2a2a] bg-[var(--bg-2)] p-6">
-            <p class="font-fragment fs-label tracking-[.18em] uppercase text-[var(--indigo)] mb-2">${t('pricing.box1.label')}</p>
+          <div class="summary-box">
+            <p class="summary-box-label">${t('pricing.box1.label')}</p>
             <p class="font-bebas fs-h2 tracking-[.04em] text-[var(--white)] leading-tight">${t('pricing.box1.text')}</p>
           </div>
-          <div class="border border-[#2a2a2a] bg-[var(--bg-2)] p-6">
-            <p class="font-fragment fs-label tracking-[.18em] uppercase text-[var(--indigo)] mb-2">${t('pricing.box2.label')}</p>
+          <div class="summary-box">
+            <p class="summary-box-label">${t('pricing.box2.label')}</p>
             <p class="font-bebas fs-h2 tracking-[.04em] text-[var(--white)] leading-tight">${t('pricing.box2.text')}</p>
           </div>
         </div>
 
         <!-- ── MÉTHODE ──────────────────────────────────── -->
-        <p id="methode" class="font-fragment fs-label tracking-[.22em] uppercase text-[var(--indigo)] flex items-center gap-3 mt-16 mb-6 pb-6 border-t-2 border-[#2e2e2e] pt-10 anim">
-          <span class="block w-8 h-px bg-[var(--indigo)]"></span>
+        <p id="methode" class="section-label mt-16 mb-6 pb-6 border-t-2 border-[var(--border)] pt-10 anim">
           ${t('pricing.method.eyebrow')}
         </p>
-
-        <h2 class="font-bebas fs-h2 tracking-[.04em] text-[var(--white)] mb-8 anim">
-          ${t('pricing.method.heading')}
-        </h2>
+        <h2 class="section-h2 mb-8 anim">${t('pricing.method.heading')}</h2>
 
         <!-- Steps -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-2 border-[#2e2e2e] mb-10 shadow-[5px_5px_0_var(--indigo)] anim" role="list">
-
-          <div class="p-8 border-b-2 lg:border-b-0 lg:border-r-2 border-[#2e2e2e] bg-[var(--bg-2)] hover:bg-[var(--bg-3)] transition-colors" role="listitem">
-            <p class="font-fragment fs-xs text-[var(--indigo)] mb-2 tracking-[.05em]">commit a1b2c3d</p>
-            <p class="font-fragment fs-xs tracking-[.2em] uppercase text-[var(--gray-p)] opacity-60 mb-2">${t('pricing.step1.label')}</p>
-            <h3 class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)] mb-3">${t('pricing.step1.title')}</h3>
+        <div class="method-grid mb-10 anim" role="list">
+          <div class="method-step" role="listitem">
+            <p class="step-commit">commit a1b2c3d</p>
+            <p class="step-meta">${t('pricing.step1.label')}</p>
+            <h3 class="step-title">${t('pricing.step1.title')}</h3>
             <p class="fs-body text-[var(--gray-p)]">${t('pricing.step1.body')}</p>
           </div>
-
-          <div class="p-8 border-b-2 sm:border-r-2 lg:border-b-0 border-[#2e2e2e] bg-[var(--bg-2)] hover:bg-[var(--bg-3)] transition-colors" role="listitem">
-            <p class="font-fragment fs-xs text-[var(--indigo)] mb-2 tracking-[.05em]">commit e4f5a6b</p>
-            <p class="font-fragment fs-xs tracking-[.2em] uppercase text-[var(--gray-p)] opacity-60 mb-2">${t('pricing.step2.label')}</p>
-            <h3 class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)] mb-3">${t('pricing.step2.title')}</h3>
+          <div class="method-step" role="listitem">
+            <p class="step-commit">commit e4f5a6b</p>
+            <p class="step-meta">${t('pricing.step2.label')}</p>
+            <h3 class="step-title">${t('pricing.step2.title')}</h3>
             <p class="fs-body text-[var(--gray-p)]">${t('pricing.step2.body')}</p>
           </div>
-
-          <div class="p-8 border-b-2 lg:border-b-0 lg:border-r-2 border-[#2e2e2e] bg-[var(--bg-2)] hover:bg-[var(--bg-3)] transition-colors" role="listitem">
-            <p class="font-fragment fs-xs text-[var(--indigo)] mb-2 tracking-[.05em]">commit c7d8e9f</p>
-            <p class="font-fragment fs-xs tracking-[.2em] uppercase text-[var(--gray-p)] opacity-60 mb-2">${t('pricing.step3.label')}</p>
-            <h3 class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)] mb-3">${t('pricing.step3.title')}</h3>
+          <div class="method-step" role="listitem">
+            <p class="step-commit">commit c7d8e9f</p>
+            <p class="step-meta">${t('pricing.step3.label')}</p>
+            <h3 class="step-title">${t('pricing.step3.title')}</h3>
             <p class="fs-body text-[var(--gray-p)]">${t('pricing.step3.body')}</p>
           </div>
-
-          <div class="p-8 bg-[var(--bg-2)] hover:bg-[var(--bg-3)] transition-colors" role="listitem">
-            <p class="font-fragment fs-xs text-[var(--indigo)] mb-2 tracking-[.05em]">HEAD</p>
-            <p class="font-fragment fs-xs tracking-[.2em] uppercase text-[var(--gray-p)] opacity-60 mb-2">${t('pricing.step4.label')}</p>
-            <h3 class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)] mb-3">${t('pricing.step4.title')}</h3>
+          <div class="method-step" role="listitem">
+            <p class="step-commit">HEAD</p>
+            <p class="step-meta">${t('pricing.step4.label')}</p>
+            <h3 class="step-title">${t('pricing.step4.title')}</h3>
             <p class="fs-body text-[var(--gray-p)]">${t('pricing.step4.body')}</p>
           </div>
-
         </div>
 
         <!-- ── INCLUS / NON COUVERT ─────────────────────── -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 border-2 border-[#2e2e2e] mb-16 anim" id="inclus-exclu">
+        <div class="coverage-grid mb-16 anim" id="inclus-exclu">
 
-          <div class="p-8 sm:border-r-2 border-[#2e2e2e] bg-[var(--bg-2)]">
-            <h3 class="font-bebas fs-h2 tracking-[.04em] text-[var(--mint)] mb-6 pb-4 border-b border-[#2e2e2e] flex items-center gap-2">
-              ${t('pricing.inclus.heading')}
-            </h3>
-            <ul class="flex flex-col">
-              <li class="flex gap-3 items-start py-3 border-b border-[#1a1a1a] fs-body text-[var(--gray-p)]"><span class="text-[var(--mint)] font-bold shrink-0">+</span> ${t('pricing.inclus.1')}</li>
-              <li class="flex gap-3 items-start py-3 border-b border-[#1a1a1a] fs-body text-[var(--gray-p)]"><span class="text-[var(--mint)] font-bold shrink-0">+</span> ${t('pricing.inclus.2')}</li>
-              <li class="flex gap-3 items-start py-3 border-b border-[#1a1a1a] fs-body text-[var(--gray-p)]"><span class="text-[var(--mint)] font-bold shrink-0">+</span> ${t('pricing.inclus.3')}</li>
-              <li class="flex gap-3 items-start py-3 fs-body text-[var(--gray-p)]"><span class="text-[var(--mint)] font-bold shrink-0">+</span> ${t('pricing.inclus.4')}</li>
+          <div class="coverage-col coverage-col--inclus">
+            <h3 class="coverage-heading text-[var(--mint)]">${t('pricing.inclus.heading')}</h3>
+            <ul>
+              <li class="inclus-item">${t('pricing.inclus.1')}</li>
+              <li class="inclus-item">${t('pricing.inclus.2')}</li>
+              <li class="inclus-item">${t('pricing.inclus.3')}</li>
+              <li class="inclus-item">${t('pricing.inclus.4')}</li>
             </ul>
           </div>
 
-          <div class="p-8 bg-[var(--black)]">
-            <h3 class="font-bebas fs-h2 tracking-[.04em] text-[var(--indigo)] mb-6 pb-4 border-b border-[#2e2e2e] flex items-center gap-2">
-              ${t('pricing.exclu.heading')}
-            </h3>
-            <ul class="flex flex-col">
-              <li class="flex gap-3 items-start py-3 border-b border-[#1a1a1a] fs-body text-[var(--gray-p)]"><span class="text-[var(--indigo)] font-bold shrink-0">×</span> ${t('pricing.exclu.1')}</li>
-              <li class="flex gap-3 items-start py-3 border-b border-[#1a1a1a] fs-body text-[var(--gray-p)]"><span class="text-[var(--indigo)] font-bold shrink-0">×</span> ${t('pricing.exclu.2')}</li>
-              <li class="flex gap-3 items-start py-3 border-b border-[#1a1a1a] fs-body text-[var(--gray-p)]"><span class="text-[var(--indigo)] font-bold shrink-0">×</span> ${t('pricing.exclu.3')}</li>
-              <li class="flex gap-3 items-start py-3 border-b border-[#1a1a1a] fs-body text-[var(--gray-p)]"><span class="text-[var(--indigo)] font-bold shrink-0">×</span> ${t('pricing.exclu.4')}</li>
-              <li class="flex gap-3 items-start py-3 border-b border-[#1a1a1a] fs-body text-[var(--gray-p)]"><span class="text-[var(--indigo)] font-bold shrink-0">×</span> ${t('pricing.exclu.5')}</li>
-              <li class="flex gap-3 items-start py-3 fs-body text-[var(--gray-p)]"><span class="text-[var(--indigo)] font-bold shrink-0">×</span> ${t('pricing.exclu.6')}</li>
+          <div class="coverage-col coverage-col--exclu">
+            <h3 class="coverage-heading text-[var(--indigo)]">${t('pricing.exclu.heading')}</h3>
+            <ul>
+              <li class="exclu-item">${t('pricing.exclu.1')}</li>
+              <li class="exclu-item">${t('pricing.exclu.2')}</li>
+              <li class="exclu-item">${t('pricing.exclu.3')}</li>
+              <li class="exclu-item">${t('pricing.exclu.4')}</li>
+              <li class="exclu-item">${t('pricing.exclu.5')}</li>
+              <li class="exclu-item">${t('pricing.exclu.6')}</li>
             </ul>
           </div>
 
