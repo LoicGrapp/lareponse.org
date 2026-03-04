@@ -8,7 +8,7 @@ export function Pricing() {
         <!-- ── PAGE HEADER ─────────────────────────────── -->
         <header class="pb-6 mb-10 border-b-2 border-[var(--indigo)] anim">
           <h1 class="font-bebas leading-none flex items-baseline gap-4">
-            <span class="fs-page-num text-[var(--indigo)]">02</span>
+            <span class="fs-page-num text-[var(--indigo)]">04</span>
             <span class="fs-page-h1 text-[var(--white)]">${t('pricing.title')}</span>
           </h1>
         </header>
