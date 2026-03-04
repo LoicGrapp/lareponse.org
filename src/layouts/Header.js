@@ -16,9 +16,9 @@ export function Header() {
 
   const navItems = [
     { path: '/',          label: t('nav.home')      },
+    { path: '/about', label: t('nav.about') },
     { path: '/services',  label: t('nav.services')  },
     { path: '/pricing',   label: t('nav.pricing')    },
-    { path: '/about', label: t('nav.about') },
     { path: '/projects',   label: t('nav.projects')    },
   ];
 
@@ -56,12 +56,6 @@ export function Header() {
                   </a>
                 </li>`;
             }).join('')}
-            <li>
-              <a href="${switchHref}" data-link
-                 class="${dBase} text-[#C8C4BE] flex items-center px-5 h-full hover:text-[#f0ede8] hover:bg-[#1a1a1a]">
-                ${otherLocale.toUpperCase()}
-              </a>
-            </li>
           </ul>
 
           <!-- Contact button (desktop) -->
@@ -69,6 +63,12 @@ export function Header() {
              class="hidden md:flex items-center ${dBase} text-[#f0ede8] bg-[#4F46E5] px-6 hover:bg-[#6366f1] shrink-0 border-l border-[#2e2e2e]
                     ${activePath === '/contact' ? 'bg-[#6366f1]' : ''}">
             ${t('nav.contact')} →
+          </a>
+
+          <!-- Language switcher (desktop) -->
+          <a href="${switchHref}" data-link
+             class="hidden md:flex items-center ${dBase} text-[#C8C4BE] px-5 h-full hover:text-[#f0ede8] hover:bg-[#1a1a1a] shrink-0 border-l border-[#2e2e2e]">
+            ${otherLocale.toUpperCase()}
           </a>
 
           <!-- Burger (mobile) -->
@@ -97,14 +97,14 @@ export function Header() {
               ${label}
             </a>`;
         }).join('')}
-        <a href="${switchHref}" data-link
-           class="block ${mBase} text-[#C8C4BE] px-6 py-4 border-b border-[#1e1e1e] hover:text-[#f0ede8] hover:bg-[#1a1a1a]">
-          ${otherLocale.toUpperCase()}
-        </a>
         <a href="${localePath('/contact')}" data-link
            class="block ${mBase} text-[#f0ede8] bg-[#4F46E5] px-6 py-4 hover:bg-[#6366f1] text-center
                   ${activePath === '/contact' ? 'bg-[#6366f1]' : ''}">
           ${t('nav.contact')} →
+        </a>
+        <a href="${switchHref}" data-link
+           class="block ${mBase} text-[#C8C4BE] px-6 py-4 border-t border-[#1e1e1e] hover:text-[#f0ede8] hover:bg-[#1a1a1a]">
+          ${otherLocale.toUpperCase()}
         </a>
       </div>
 
