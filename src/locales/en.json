@@ -180,5 +180,61 @@
   "about.conclusion.num":  "Conclusion",
   "about.conclusion.text": "What is visible can be questioned — and what can be questioned can be changed.",
 
-  "about.cta.pricing": "See pricing →"
+  "about.cta.pricing": "See pricing →",
+
+  "projects.title": "PROJECTS",
+  "projects.intro": "LaRéponse builds tools because reality demands them. Each project is born from a concrete problem — not a catalogue ambition. These are reusable, adaptable, transferable building blocks.",
+  "projects.see":     "View project",
+  "projects.soon":    "Coming soon",
+  "projects.why":     "Why",
+  "projects.forwhom": "For whom",
+  "projects.what":    "What it is",
+  "projects.cta.method": "See the method →",
+
+  "projects.tag.concept":    "Concept ready",
+  "projects.tag.mvp":        "MVP ready",
+  "projects.tag.identity":   "Identity set",
+  "projects.tag.draft":      "Advanced draft",
+  "projects.tag.production": "In production",
+  "projects.tag.wip":        "Usable core",
+
+  "projects.dashbored.etym":    "\"Dashboard\" turned against itself — a work board, not a control panel.",
+  "projects.dashbored.why":     "Tools that freeze eventually become obstacles. Structure is earned through use.",
+  "projects.dashbored.forwhom": "Collectives, associations, knowledge workers who build as they go.",
+  "projects.dashbored.what":    "Thinking environment with provisional structure. Patterns are only promoted if they withstand reality.",
+
+  "projects.dundun.etym":    "\"Done and done.\" — two beats, two closures. An onomatopoeia of completion.",
+  "projects.dundun.why":     "Restore execution discipline without guilt-inducing calendars or fragmenting notifications.",
+  "projects.dundun.forwhom": "People in cognitive overload, teams who want to see breakdowns rather than hide them.",
+  "projects.dundun.what":    "Prepare → Do → Close. A single active slot. The break is visible, therefore analysable.",
+
+  "projects.tenpoken.etym":    "Toki pona: \"possible time, time in potential.\" Practising time — not taming it.",
+  "projects.tenpoken.why":     "Refusing the fiction of total mastery as much as that of retrospective narrative.",
+  "projects.tenpoken.forwhom": "Creatives, freelancers, anyone who wants a light discipline without taxonomy.",
+  "projects.tenpoken.what":    "Event, Now, Window, Drift. No projects, no categories. Drift becomes an instrument of truth.",
+
+  "projects.jdad.etym":    "\"JSON Data And Directions.\" Data as parent, directions as child — linked, not conflated.",
+  "projects.jdad.why":     "Stop conflating data and navigation in APIs, and paying the cost in parsing and latency.",
+  "projects.jdad.forwhom": "API teams, IoT, edge, constrained networks wanting a predictable format.",
+  "projects.jdad.what":    "JSON format with _ as connotation signifier. Relations traversable in constant time.",
+
+  "projects.koral.etym":    "\"Kollecto · Rapporto · Listo.\" Collect without forcing, connect to make accountable.",
+  "projects.koral.why":     "Concrete CRM shaped by the field — not by SaaS catalogues that never fit reality.",
+  "projects.koral.forwhom": "Small organisations, service trades, associative contexts.",
+  "projects.koral.what":    "PHP MIT CRM on Kadro. Sessions, notes, planners, workers. Convention-over-configuration.",
+
+  "projects.badhat.etym":    "\"Bits Are Decisive. HTTP As Terminal.\" — accountable before magical.",
+  "projects.badhat.why":     "Stop dressing up reality behind convenient abstractions. 25 years of field work distilled.",
+  "projects.badhat.forwhom": "Developers who privilege causality over doctrine, the accountable over the magical.",
+  "projects.badhat.what":    "Minimal PHP core: hook → seek → loot → HTTP. File-system routing, bitmasks, explicit failure.",
+
+  "value.accessibility": "ACCESSIBILITY",
+  "value.eco":           "ECO-RESPONSIBILITY",
+  "value.inclusivity":   "INCLUSIVITY",
+  "value.community":     "COMMUNITIES",
+
+  "manifeste.text":  "We are not hour-sellers. We design stable, readable, transferable systems — for freelancers, associations and small structures. Paid once. Validated in 30 days. Guaranteed for life.",
+  "manifeste.about": "ABOUT LARÉPONSE",
+
+  "cta.text": "The world is saturated with technical noise. LaRéponse does the opposite: clear systems, proportionate, governed by simple rules. Ready to build?"
 }

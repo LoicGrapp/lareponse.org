@@ -30,7 +30,7 @@ export function HomePage() {
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-          <p class="font-mono-space fs-body text-[#C8C4BE] border-l-[3px] border-[#818CF8] pl-5 max-w-[34ch] anim anim-d2">
+          <p class="font-mono-space fs-body text-[#C8C4BE] border-l-[3px] border-[#818CF8] pl-5 max-w-[34ch] self-start anim anim-d2">
             ${t('hero.sub')}<br><br>${t('hero.sub2')}
           </p>
 
@@ -38,7 +38,7 @@ export function HomePage() {
 
             <div class="flex flex-wrap gap-3">
               <a href="${localePath('/contact')}" data-link class="btn-hero">${t('hero.cta.primary')}</a>
-              <a href="${localePath('/methode')}" data-link class="btn-outline">${t('hero.cta.secondary')}</a>
+              <a href="${localePath('/pricing')}#methode" data-link class="btn-outline">${t('hero.cta.secondary')}</a>
             </div>
 
             <div class="border border-[#242424] bg-[#111111]" role="list">
@@ -48,7 +48,7 @@ export function HomePage() {
               <div class="flex items-center gap-3 px-4 py-3 border-b border-[#1e1e1e] font-fragment fs-body tracking-[.1em] uppercase text-[#C8C4BE]" role="listitem">
                 <em class="text-[#818CF8] font-bold shrink-0 not-italic">✓</em><span>${t('proof.2')}</span>
               </div>
-              <div class="flex items-center gap-3 px-4 py-3 border-b border-[#1e1e1e] font-fragment fs-bodytracking-[.1em] uppercase text-[#C8C4BE]" role="listitem">
+              <div class="flex items-center gap-3 px-4 py-3 border-b border-[#1e1e1e] font-fragment fs-body tracking-[.1em] uppercase text-[#C8C4BE]" role="listitem">
                 <em class="text-[#818CF8] font-bold shrink-0 not-italic">✓</em><span>${t('proof.3')}</span>
               </div>
               <div class="flex items-center gap-3 px-4 py-3 font-fragment fs-body tracking-[.1em] uppercase text-[#C8C4BE]" role="listitem">
@@ -58,6 +58,66 @@ export function HomePage() {
 
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ── MINI-MANIFESTE ────────────────────────────────── -->
+    <section class="py-8 px-6 md:px-[10%] anim">
+      <div class="max-w-[72rem] mx-auto">
+
+        <div class="code-block" role="figure">
+          <div class="code-line"><span class="code-ln">1</span><span class="code-comment">// LaRéponse — manifeste.ts</span></div>
+          <div class="code-line"><span class="code-ln">2</span></div>
+          <div class="code-line"><span class="code-ln">3</span><span class="code-keyword">const</span> <span class="code-const">DISCIPLINE</span> = {</div>
+          <div class="code-line"><span class="code-ln">4</span>&nbsp;&nbsp;règle: <span class="code-string">"ne pas mentir sur la complexité"</span>,</div>
+          <div class="code-line"><span class="code-ln">5</span></div>
+          <div class="code-line"><span class="code-ln">6</span>&nbsp;&nbsp;<span class="code-comment">// La réalité est complexe, et tout ce qui prétend</span></div>
+          <div class="code-line"><span class="code-ln">7</span>&nbsp;&nbsp;<span class="code-comment">// le contraire ne fait que déplacer cette complexité.</span></div>
+          <div class="code-line"><span class="code-ln">8</span></div>
+          <div class="code-line"><span class="code-ln">9</span>&nbsp;&nbsp;<span class="code-fn">exposer</span>: (<span class="code-const">structure</span>) => <span class="code-const">structure</span>,</div>
+          <div class="code-line"><span class="code-ln">10</span>&nbsp;&nbsp;<span class="code-fn">cacher</span>: <span class="code-keyword">never</span>,</div>
+          <div class="code-line"><span class="code-ln">11</span>};</div>
+          <div class="code-line"><span class="code-ln">12</span></div>
+          <div class="code-line"><span class="code-ln">13</span><span class="code-comment">// ce qui est visible peut être questionné.</span></div>
+          <div class="code-line"><span class="code-ln">14</span><span class="code-keyword">export default</span> <span class="code-const">DISCIPLINE</span>;</div>
+        </div>
+
+        <!-- Values strip -->
+        <div class="grid grid-cols-2 md:grid-cols-4 border border-[#1e1e1e] border-t-0 bg-[#111111] anim anim-d1">
+          <div class="flex flex-col items-center gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] p-4 border-r border-b md:border-b-0 border-[#1e1e1e]">
+            <span class="flex items-center justify-center w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
+              <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+            </span>
+            ${t('value.accessibility')}
+          </div>
+          <div class="flex flex-col items-center gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] p-4 border-b md:border-b-0 border-r md:border-r-0 border-[#1e1e1e]">
+            <span class="flex items-center justify-center w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
+              <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </span>
+            ${t('value.eco')}
+          </div>
+          <div class="flex flex-col items-center gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] p-4 border-b md:border-b-0 border-r border-[#1e1e1e]">
+            <span class="flex items-center justify-center w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
+              <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </span>
+            ${t('value.inclusivity')}
+          </div>
+          <div class="flex flex-col items-center gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] p-4">
+            <span class="flex items-center justify-center w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
+              <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1l-.5-2zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
+            </span>
+            ${t('value.community')}
+          </div>
+        </div>
+
+        <!-- Manifeste CTA row -->
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mt-8 anim anim-d2">
+          <p class="font-mono-space fs-body text-[#C8C4BE] leading-[1.6]">
+            ${t('manifeste.text')}
+          </p>
+          <a href="${localePath('/about')}" data-link class="btn-outline shrink-0 self-start">${t('manifeste.about')}</a>
+        </div>
+
       </div>
     </section>
 
@@ -122,40 +182,14 @@ export function HomePage() {
       </div>
     </section>
 
-    <!-- ── MINI-MANIFESTE ────────────────────────────────── -->
-    <section class="py-4 px-6 md:px-[10%] anim">
-      <div class="max-w-[72rem] mx-auto">
-
-      <div class="code-block" role="figure">
-        <div class="code-line"><span class="code-ln">1</span><span class="code-comment">// LaRéponse — manifeste.ts</span></div>
-        <div class="code-line"><span class="code-ln">2</span></div>
-        <div class="code-line"><span class="code-ln">3</span><span class="code-keyword">const</span> <span class="code-const">DISCIPLINE</span> = {</div>
-        <div class="code-line"><span class="code-ln">4</span>&nbsp;&nbsp;règle: <span class="code-string">"ne pas mentir sur la complexité"</span>,</div>
-        <div class="code-line"><span class="code-ln">5</span></div>
-        <div class="code-line"><span class="code-ln">6</span>&nbsp;&nbsp;<span class="code-comment">// La réalité est complexe, et tout ce qui prétend</span></div>
-        <div class="code-line"><span class="code-ln">7</span>&nbsp;&nbsp;<span class="code-comment">// le contraire ne fait que déplacer cette complexité.</span></div>
-        <div class="code-line"><span class="code-ln">8</span></div>
-        <div class="code-line"><span class="code-ln">9</span>&nbsp;&nbsp;<span class="code-fn">exposer</span>: (<span class="code-const">structure</span>) => <span class="code-const">structure</span>,</div>
-        <div class="code-line"><span class="code-ln">10</span>&nbsp;&nbsp;<span class="code-fn">cacher</span>: <span class="code-keyword">never</span>,</div>
-        <div class="code-line"><span class="code-ln">11</span>};</div>
-        <div class="code-line"><span class="code-ln">12</span></div>
-        <div class="code-line"><span class="code-ln">13</span><span class="code-comment">// ce qui est visible peut être questionné.</span></div>
-        <div class="code-line"><span class="code-ln">14</span><span class="code-keyword">export default</span> <span class="code-const">DISCIPLINE</span>;</div>
-      </div>
-
-      <a href="${localePath('/manifeste')}" data-link
-         class="font-fragment fs-label tracking-[.12em] uppercase text-[#818CF8] inline-block mt-4 hover:text-[#A5B4FC] transition-colors anim anim-d1">
-        ${t('manifeste.cta')}
-      </a>
-
-      </div>
-    </section>
-
     <!-- ── CLOSING CTA ───────────────────────────────────── -->
     <section class="py-16 px-6 md:px-[10%] text-center anim">
       <div class="max-w-[72rem] mx-auto">
         <p class="font-bebas fs-cta tracking-[.04em] text-[#f0ede8] mb-4">
           ${t('cta.heading')}
+        </p>
+        <p class="font-mono-space fs-body text-[#C8C4BE] max-w-[60ch] mx-auto mb-8">
+          ${t('cta.text')}
         </p>
         <a href="${localePath('/contact')}" data-link class="btn-hero">${t('cta.btn')}</a>
       </div>

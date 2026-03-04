@@ -102,7 +102,7 @@ export function Pricing() {
         </div>
 
         <!-- ── MÉTHODE ──────────────────────────────────── -->
-        <p class="font-fragment fs-label tracking-[.22em] uppercase text-[var(--indigo)] flex items-center gap-3 mt-16 mb-6 pb-6 border-t-2 border-[#2e2e2e] pt-10 anim">
+        <p id="methode" class="font-fragment fs-label tracking-[.22em] uppercase text-[var(--indigo)] flex items-center gap-3 mt-16 mb-6 pb-6 border-t-2 border-[#2e2e2e] pt-10 anim">
           <span class="block w-8 h-px bg-[var(--indigo)]"></span>
           ${t('pricing.method.eyebrow')}
         </p>

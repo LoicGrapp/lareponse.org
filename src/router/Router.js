@@ -42,10 +42,15 @@ class Router {
    * @param {string} path - Le chemin vers lequel naviguer
    */
   navigate(path) {
-    // Ajouter l'entrée dans l'historique
+    const [routePath, hash] = path.split('#');
     window.history.pushState({}, '', path);
-    // Gérer la route
-    this.handleRoute(path);
+    this.handleRoute(routePath);
+    if (hash) {
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    }
   }
 
   /**
@@ -133,6 +138,7 @@ class Router {
       app.innerHTML = Layout({ content: html });
       this._setupMobileMenu();
       this._runTypingAnimations();
+      this._setupProjectAccordion();
     }
   }
 
@@ -151,6 +157,37 @@ class Router {
         }
       };
       setTimeout(tick, 400);
+    });
+  }
+
+  _setupProjectAccordion() {
+    const cards = document.querySelectorAll('.proj:not(.proj--disabled)');
+    cards.forEach(card => {
+      const toggle = card.querySelector('.proj-toggle');
+      if (!toggle) return;
+      toggle.addEventListener('click', () => {
+        const isOpen = card.classList.contains('open');
+        cards.forEach(c => {
+          if (c !== card && c.classList.contains('open')) {
+            c.classList.remove('open');
+            const t = c.querySelector('.proj-toggle');
+            if (t) t.setAttribute('aria-expanded', 'false');
+          }
+        });
+        card.classList.toggle('open', !isOpen);
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        cards.forEach(c => {
+          if (c.classList.contains('open')) {
+            c.classList.remove('open');
+            const t = c.querySelector('.proj-toggle');
+            if (t) { t.setAttribute('aria-expanded', 'false'); t.focus(); }
+          }
+        });
+      }
     });
   }
 

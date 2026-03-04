@@ -222,6 +222,177 @@
 .anim-d3 { animation-delay: .24s; }
 .anim-d4 { animation-delay: .32s; }
 
+/* ── PROJECTS GRID ───────────────────────────────────── */
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 64rem;
+}
+@media (min-width: 760px) {
+  .proj-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.proj {
+  border: 1px solid #2a2a2a;
+  background: var(--bg-2);
+  overflow: hidden;
+  transition: border-color .15s;
+}
+.proj.open { border-color: var(--indigo); }
+
+.proj-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg-3);
+}
+.proj-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.proj-hero-gradient {
+  position: absolute;
+  inset: 0;
+}
+
+.proj-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .9rem 1.2rem;
+  border-bottom: 1px solid #2a2a2a;
+  gap: .5rem;
+}
+.proj-title-left {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  min-width: 0;
+}
+.proj-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: .06em;
+  line-height: 1;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.proj-tag {
+  font-family: "Fragment Mono", monospace;
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  border: 1px solid #333;
+  padding: .15rem .5rem;
+  display: inline-block;
+  background: var(--bg-3);
+  color: var(--gray-p);
+}
+.proj-tag--yellow { border-color: var(--indigo-light); color: var(--indigo-light); background: transparent; }
+.proj-tag--green  { border-color: var(--mint); color: var(--mint); background: transparent; }
+
+.proj-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: 100%;
+  padding: .65rem 1.2rem;
+  border: none;
+  border-top: 1px solid #1e1e1e;
+  background: var(--bg-3);
+  color: var(--gray-p);
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-label);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: crosshair;
+  transition: color .15s, background .15s;
+}
+.proj-toggle:hover,
+.proj-toggle:focus-visible { color: var(--white); background: #1a1a1a; }
+.proj-toggle:focus-visible { outline: 2px solid var(--indigo); outline-offset: -2px; }
+
+.proj-toggle-icon {
+  display: inline-block;
+  transition: transform .3s ease;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.proj.open .proj-toggle-icon { transform: rotate(180deg); }
+.proj.open .proj-toggle       { color: var(--indigo); }
+
+.proj-expand {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .35s ease-out, opacity .25s ease;
+}
+.proj.open .proj-expand { max-height: 600px; opacity: 1; }
+
+.proj-expand-inner {
+  padding: 1.2rem;
+  opacity: 0;
+  transition: opacity .25s ease .1s;
+}
+.proj.open .proj-expand-inner { opacity: 1; }
+
+.proj-etym {
+  color: var(--indigo-light);
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  font-style: italic;
+  padding-bottom: .9rem;
+  border-bottom: 1px solid #1e1e1e;
+  margin-bottom: .9rem;
+}
+.proj-body { display: flex; flex-direction: column; gap: .9rem; }
+.proj-row strong {
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-label);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  display: block;
+  margin-bottom: .25rem;
+}
+.proj-row p {
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--gray-p);
+}
+
+.proj--disabled {
+  opacity: .45;
+  pointer-events: none;
+}
+.proj--disabled .proj-hero { filter: grayscale(60%); }
+.proj--disabled .proj-hero::after {
+  content: 'EN COURS DE CRÉATION';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-label);
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: rgba(0,0,0,.55);
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proj-expand, .proj-toggle-icon, .proj-expand-inner { transition: none !important; }
+}
+
 /* ── AXIOMS GRID (page À propos) ─────────────────────── */
 .axioms-grid {
   display: grid;
