@@ -1,5 +1,6 @@
 import { router } from './router/Router.js';
 import { ROUTES } from './config/constants.js';
+import { initGridPulse } from './utils/gridPulse.js';
 
 // Import des pages (à créer)
 import { HomePage } from './pages/HomePage.js';
@@ -13,4 +14,5 @@ router
 // Démarrer le router quand le DOM est prêt
 document.addEventListener('DOMContentLoaded', () => {
   router.start();
+  initGridPulse();
 });
