@@ -48,11 +48,11 @@ export function Contact() {
             aria-label="${t('contact.heading')}">
 
             <div class="contact-details">
-              <p>+32 455·173·473<br>
+              <p><a href="tel:+32455173473" class="hover:text-[var(--indigo)]">+32 455·173·473</a><br>
                 TVA&#8209;BE 0678·421·364<br>
                 Rue Verboeckhaven, 64<br>
                 Brussels, Belgium<br>
-                touch@hexmakina.be</p>
+                <a href="mailto:touch@hexmakina.be" class="hover:text-[var(--indigo)]">touch@hexmakina.be</a></p>
             </div>
 
             <div class="field field-stretch">

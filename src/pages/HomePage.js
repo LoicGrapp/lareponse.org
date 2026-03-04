@@ -83,28 +83,28 @@ export function HomePage() {
         </div>
 
         <!-- Values strip -->
-        <div class="grid grid-cols-2 md:grid-cols-4 border border-[#1e1e1e] border-t-0 bg-[#111111] anim anim-d1">
-          <div class="flex flex-col items-center gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] p-4 border-r border-b md:border-b-0 border-[#1e1e1e]">
-            <span class="flex items-center justify-center w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
-              <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+        <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-[#1e1e1e] border border-[#1e1e1e] border-t-0 bg-[#111111] anim anim-d1">
+          <div class="flex flex-row md:flex-col items-center justify-start md:justify-center gap-3 md:gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] py-2 px-4 md:p-4">
+            <span class="flex items-center justify-center shrink-0 w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
+              <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1l-.5-2zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
             </span>
             ${t('value.accessibility')}
           </div>
-          <div class="flex flex-col items-center gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] p-4 border-b md:border-b-0 border-r md:border-r-0 border-[#1e1e1e]">
-            <span class="flex items-center justify-center w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
+          <div class="flex flex-row md:flex-col items-center justify-start md:justify-center gap-3 md:gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] py-2 px-4 md:p-4">
+            <span class="flex items-center justify-center shrink-0 w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
               <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
             </span>
             ${t('value.eco')}
           </div>
-          <div class="flex flex-col items-center gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] p-4 border-b md:border-b-0 border-r border-[#1e1e1e]">
-            <span class="flex items-center justify-center w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
-              <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          <div class="flex flex-row md:flex-col items-center justify-start md:justify-center gap-3 md:gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] py-2 px-4 md:p-4">
+            <span class="flex items-center justify-center shrink-0 w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
+              <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
             </span>
             ${t('value.inclusivity')}
           </div>
-          <div class="flex flex-col items-center gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] p-4">
-            <span class="flex items-center justify-center w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
-              <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1l-.5-2zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
+          <div class="flex flex-row md:flex-col items-center justify-start md:justify-center gap-3 md:gap-[.45rem] font-fragment fs-xs tracking-[.12em] uppercase text-[#C8C4BE] py-2 px-4 md:p-4">
+            <span class="flex items-center justify-center shrink-0 w-[34px] h-[34px] border-[1.5px] border-[#818CF8] rounded-full">
+              <svg width="16" height="16" fill="#818CF8" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
             </span>
             ${t('value.community')}
           </div>

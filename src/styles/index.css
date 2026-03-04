@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-/* Variables globales (couleurs) */
+/* ═══════════════════════════════════════════════════════════════
+   VARIABLES GLOBALES
+   ═══════════════════════════════════════════════════════════════ */
 :root {
   /* Couleurs */
   --black:        #0a0a0a;
@@ -15,7 +17,7 @@
   --indigo-light: #A5B4FC;
   --mint:         #34D399;
 
-  /* Typographie */
+  /* Typographie — corps */
   --fs-h1:         clamp(5rem, 16vw, 14rem);
   --fs-h2:         clamp(1.6rem, 3vw, 2.2rem);
   --fs-cta:        clamp(1.4rem, 3vw, 2rem);
@@ -24,11 +26,15 @@
   --fs-label:      0.78rem;
   --fs-xs:         0.72rem;
 
-  /* H1 des pages intérieures (contact, tarifs, services…) */
-  --fs-page-num:   clamp(4rem, 9vw, 7rem);   /* le numéro 02 / 03 */
-  --fs-page-h1:    clamp(3rem, 7vw, 5.5rem); /* le titre de page  */
+  /* Typographie — pages intérieures (contact, tarifs, services…) */
+  --fs-page-num:   clamp(4rem, 9vw, 7rem);   /* numéro 02 / 03 */
+  --fs-page-h1:    clamp(3rem, 7vw, 5.5rem); /* titre de page  */
 }
 
+
+/* ═══════════════════════════════════════════════════════════════
+   BASE
+   ═══════════════════════════════════════════════════════════════ */
 @layer base {
   html, body {
     background: var(--black);
@@ -51,7 +57,12 @@
   }
 }
 
+
+/* ═══════════════════════════════════════════════════════════════
+   UTILITAIRES
+   ═══════════════════════════════════════════════════════════════ */
 @layer utilities {
+  /* Couleurs de texte et de fond */
   .text-brand-white  { color: var(--white); }
   .text-brand-gray   { color: var(--gray-p); }
   .text-brand-purple { color: var(--purple); }
@@ -62,10 +73,12 @@
   .bg-bg-2           { background: var(--bg-2); }
   .bg-bg-3           { background: var(--bg-3); }
 
+  /* Familles de polices */
   .font-bebas     { font-family: "Bebas Neue", sans-serif; }
   .font-mono-space{ font-family: "Space Mono", monospace; }
   .font-fragment  { font-family: "Fragment Mono", "Courier New", monospace; }
 
+  /* Texte contour (effet outline) */
   .text-outlined {
     -webkit-text-stroke: 2px var(--white);
     color: transparent;
@@ -83,11 +96,16 @@
   .fs-page-h1    { font-size: var(--fs-page-h1); }
 }
 
-/* ── BUTTONS BRUTALISTES ─────────────────────────────── */
+
+/* ═══════════════════════════════════════════════════════════════
+   COMPOSANTS GLOBAUX — BOUTONS BRUTALISTES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Bouton plein (CTA principal) */
 .btn-hero {
   font-family: "Space Mono", monospace;
   font-weight: 700;
-  font-size: 15px;
+  font-size: var(--fs-body);
   letter-spacing: .08em;
   text-transform: uppercase;
   padding: .85rem 1.6rem;
@@ -100,19 +118,14 @@
   white-space: nowrap;
   cursor: crosshair;
 }
-.btn-hero:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 3px 3px 0 var(--indigo-dark);
-}
-.btn-hero:active {
-  transform: translate(5px, 5px);
-  box-shadow: none;
-}
+.btn-hero:hover  { transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--indigo-dark); }
+.btn-hero:active { transform: translate(5px, 5px); box-shadow: none; }
 
+/* Bouton contour (CTA secondaire) */
 .btn-outline {
   font-family: "Space Mono", monospace;
   font-weight: 700;
-  font-size: 15px;
+  font-size: var(--fs-body);
   letter-spacing: .08em;
   text-transform: uppercase;
   padding: .85rem 1.6rem;
@@ -125,74 +138,27 @@
   white-space: nowrap;
   cursor: crosshair;
 }
-.btn-outline:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 3px 3px 0 var(--white);
-}
-.btn-outline:active {
-  transform: translate(5px, 5px);
-  box-shadow: none;
-}
+.btn-outline:hover  { transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--white); }
+.btn-outline:active { transform: translate(5px, 5px); box-shadow: none; }
 
-/* ── CODE BLOCK ──────────────────────────────────────── */
-.code-block {
-  background: #0a0a0a;
-  border: 1px solid #2a2a2a;
-  font-family: "Fragment Mono", "Courier New", monospace;
-  font-size: .82rem;
-  line-height: 1.85;
-  overflow-x: auto;
-  position: relative;
-}
-.code-block::before {
-  content: '// manifeste.ts';
-  display: block;
-  padding: .6rem 1.2rem;
-  font-family: "Fragment Mono", monospace;
-  font-size: .72rem;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--gray-p);
-  opacity: .5;
-  border-bottom: 1px solid #1a1a1a;
-  background: #080808;
-}
-.code-line {
-  display: flex;
-  padding: .15rem 1.2rem .15rem 0;
-  transition: background .1s;
-}
-.code-line:hover { background: rgba(125,100,255,.04); }
-.code-ln {
-  display: inline-block;
-  width: 3rem;
-  text-align: right;
-  padding-right: 1.2rem;
-  color: #555;
-  user-select: none;
-  flex-shrink: 0;
-  border-right: 1px solid #1a1a1a;
-  margin-right: 1rem;
-}
-.code-comment  { color: #6a6a6a; font-style: italic; }
-.code-keyword  { color: var(--indigo); }
-.code-string   { color: #7dcea0; }
-.code-fn       { color: #d4a0ff; }
-.code-const    { color: var(--white); font-weight: 600; }
 
-/* ── TYPING ANIMATION ────────────────────────────────── */
-[data-typing]::after {
-  content: '█';
-  color: #818CF8;
+/* ═══════════════════════════════════════════════════════════════
+   COMPOSANTS GLOBAUX — ANIMATIONS
+   ═══════════════════════════════════════════════════════════════ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-[data-typing].typing-done::after {
-  animation: blink-cursor .7s step-end infinite;
-}
-@keyframes blink-cursor {
-  50% { opacity: 0; }
-}
+.anim    { animation: fadeIn .35s ease both; }
+.anim-d1 { animation-delay: .08s; }
+.anim-d2 { animation-delay: .16s; }
+.anim-d3 { animation-delay: .24s; }
+.anim-d4 { animation-delay: .32s; }
 
-/* ── BURGER MENU ─────────────────────────────────────── */
+
+/* ═══════════════════════════════════════════════════════════════
+   HEADER / NAVIGATION — BURGER MENU
+   ═══════════════════════════════════════════════════════════════ */
 .burger-icon {
   display: flex;
   flex-direction: column;
@@ -207,22 +173,92 @@
   transition: transform .2s ease, opacity .2s ease;
   transform-origin: center;
 }
+
+/* État ouvert : les barres forment une croix */
 #burger.is-open .bar-1 { transform: translateY(5.5px) rotate(45deg); }
 #burger.is-open .bar-2 { opacity: 0; transform: scaleX(0); }
 #burger.is-open .bar-3 { transform: translateY(-5.5px) rotate(-45deg); }
 
-/* ── ANIMATIONS ──────────────────────────────────────── */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.anim    { animation: fadeIn .35s ease both; }
-.anim-d1 { animation-delay: .08s; }
-.anim-d2 { animation-delay: .16s; }
-.anim-d3 { animation-delay: .24s; }
-.anim-d4 { animation-delay: .32s; }
 
-/* ── PROJECTS GRID ───────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════
+   PAGE ACCUEIL — CODE BLOCK
+   Bloc de code décoratif affiché dans la section héro
+   ═══════════════════════════════════════════════════════════════ */
+.code-block {
+  background: var(--black);
+  border: 1px solid #2a2a2a;
+  font-family: "Fragment Mono", "Courier New", monospace;
+  font-size: .82rem;
+  line-height: 1.85;
+  overflow-x: auto;
+  position: relative;
+}
+
+/* En-tête du bloc : nom de fichier fictif */
+.code-block::before {
+  content: '// manifeste.ts';
+  display: block;
+  padding: .6rem 1.2rem;
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-xs);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gray-p);
+  opacity: .5;
+  border-bottom: 1px solid var(--bg-3);
+  background: #080808;
+}
+
+.code-line {
+  display: flex;
+  padding: .15rem 1.2rem .15rem 0;
+  transition: background .1s;
+}
+.code-line:hover { background: rgba(125,100,255,.04); }
+
+/* Numéro de ligne */
+.code-ln {
+  display: inline-block;
+  width: 3rem;
+  text-align: right;
+  padding-right: 1.2rem;
+  color: #555;
+  user-select: none;
+  flex-shrink: 0;
+  border-right: 1px solid var(--bg-3);
+  margin-right: 1rem;
+}
+
+/* Coloration syntaxique */
+.code-comment  { color: #6a6a6a; font-style: italic; }
+.code-keyword  { color: var(--indigo); }
+.code-string   { color: #7dcea0; }
+.code-fn       { color: #d4a0ff; }
+.code-const    { color: var(--white); font-weight: 600; }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE ACCUEIL — ANIMATION TYPING
+   Curseur clignotant sur les éléments [data-typing]
+   ═══════════════════════════════════════════════════════════════ */
+[data-typing]::after {
+  content: '█';
+  color: var(--indigo);
+}
+[data-typing].typing-done::after {
+  animation: blink-cursor .7s step-end infinite;
+}
+@keyframes blink-cursor {
+  50% { opacity: 0; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE PROJETS
+   Grille de cartes de projets avec volet expansible
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Grille responsive */
 .proj-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -233,6 +269,7 @@
   .proj-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Carte projet */
 .proj {
   border: 1px solid #2a2a2a;
   background: var(--bg-2);
@@ -241,6 +278,7 @@
 }
 .proj.open { border-color: var(--indigo); }
 
+/* Visuel en-tête de la carte */
 .proj-hero {
   position: relative;
   width: 100%;
@@ -259,6 +297,7 @@
   inset: 0;
 }
 
+/* Barre titre */
 .proj-title-bar {
   display: flex;
   align-items: center;
@@ -282,9 +321,10 @@
   white-space: nowrap;
 }
 
+/* Tags de statut */
 .proj-tag {
   font-family: "Fragment Mono", monospace;
-  font-size: .72rem;
+  font-size: var(--fs-xs);
   letter-spacing: .18em;
   text-transform: uppercase;
   border: 1px solid #333;
@@ -294,8 +334,9 @@
   color: var(--gray-p);
 }
 .proj-tag--yellow { border-color: var(--indigo-light); color: var(--indigo-light); background: transparent; }
-.proj-tag--green  { border-color: var(--mint); color: var(--mint); background: transparent; }
+.proj-tag--green  { border-color: var(--mint);         color: var(--mint);         background: transparent; }
 
+/* Bouton "voir plus / voir moins" */
 .proj-toggle {
   display: flex;
   align-items: center;
@@ -315,7 +356,7 @@
   transition: color .15s, background .15s;
 }
 .proj-toggle:hover,
-.proj-toggle:focus-visible { color: var(--white); background: #1a1a1a; }
+.proj-toggle:focus-visible { color: var(--white); background: var(--bg-3); }
 .proj-toggle:focus-visible { outline: 2px solid var(--indigo); outline-offset: -2px; }
 
 .proj-toggle-icon {
@@ -327,6 +368,7 @@
 .proj.open .proj-toggle-icon { transform: rotate(180deg); }
 .proj.open .proj-toggle       { color: var(--indigo); }
 
+/* Volet expansible */
 .proj-expand {
   max-height: 0;
   overflow: hidden;
@@ -342,6 +384,7 @@
 }
 .proj.open .proj-expand-inner { opacity: 1; }
 
+/* Contenu du volet */
 .proj-etym {
   color: var(--indigo-light);
   font-family: "Fragment Mono", monospace;
@@ -368,6 +411,7 @@
   color: var(--gray-p);
 }
 
+/* Projet désactivé (en cours de création) */
 .proj--disabled {
   opacity: .45;
   pointer-events: none;
@@ -389,11 +433,16 @@
   z-index: 2;
 }
 
+/* Désactive les transitions pour les utilisateurs sensibles au mouvement */
 @media (prefers-reduced-motion: reduce) {
   .proj-expand, .proj-toggle-icon, .proj-expand-inner { transition: none !important; }
 }
 
-/* ── AXIOMS GRID (page À propos) ─────────────────────── */
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE À PROPOS — GRILLE D'AXIOMES
+   Grille de principes/valeurs avec cellules bordurées
+   ═══════════════════════════════════════════════════════════════ */
 .axioms-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -415,6 +464,7 @@
 }
 .axiom-cell:hover { background: var(--bg-3); }
 
+/* Gestion des bordures selon le nombre de colonnes */
 @media (max-width: 679px) {
   .axiom-cell { border-right: none; }
   .axiom-cell:last-child { border-bottom: none; }
@@ -428,6 +478,7 @@
   .axiom-cell:nth-last-child(-n+3) { border-bottom: none; }
 }
 
+/* Cellule de conclusion (s'étend sur toute la largeur) */
 .axiom-conclusion {
   background: var(--indigo-dark);
   border-right: none;
@@ -438,7 +489,13 @@
   .axiom-conclusion { grid-column: 1 / -1; }
 }
 
-/* ── CONTACT PAGE ───────────────────────────────────────── */
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE CONTACT
+   Layout deux colonnes : infos pratiques + formulaire
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Layout principal */
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -451,6 +508,7 @@
   }
 }
 
+/* Note d'introduction avec bordure gauche */
 .contact-note {
   font-size: .94rem;
   line-height: 1.75;
@@ -460,6 +518,7 @@
   margin-bottom: 2.5rem;
 }
 
+/* Bloc d'informations pratiques (délai, disponibilité…) */
 .contact-facts {
   display: flex;
   flex-direction: column;
@@ -486,6 +545,7 @@
   line-height: 1.5;
 }
 
+/* Formulaire de contact */
 .contact-form {
   border: 1px solid #2a2a2a;
   background: var(--black);
@@ -504,6 +564,7 @@
 }
 .contact-details p { margin: 0; }
 
+/* Champs du formulaire */
 .field {
   display: flex;
   flex-direction: column;
@@ -541,6 +602,7 @@
 .field textarea:focus,
 .field select:focus { background: var(--bg-3); }
 
+/* Pied de formulaire avec bouton d'envoi */
 .form-submit {
   padding: 1.2rem;
   border-top: 1px solid #2a2a2a;
@@ -557,6 +619,7 @@
   letter-spacing: .05em;
   margin: 0;
 }
+/* Texte de réassurance volontairement discret */
 .reassure {
   font-family: "Fragment Mono", monospace;
   font-size: .75rem;
@@ -565,9 +628,17 @@
   color: #444;
   text-align: center;
 }
+
+/* Champ honeypot anti-spam (caché visuellement) */
 .honeypot { display: none; }
 
-/* ── SERVICES PAGE ──────────────────────────────────────── */
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE SERVICES
+   Grille de prestations + cartes de tarification
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Grille des prestations */
 .svc-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -581,6 +652,7 @@
   .svc-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* Cellule de prestation avec indicateur coloré au survol */
 .svc {
   padding: 2rem;
   border-bottom: 1px solid #2a2a2a;
@@ -603,12 +675,13 @@
 .svc:hover { background: var(--bg-3); }
 .svc:hover::before { height: 100%; }
 
+/* Gestion des bordures selon le nombre de colonnes */
 @media (min-width: 520px) {
   .svc:nth-child(odd) { border-right: 1px solid #2a2a2a; }
 }
 @media (min-width: 920px) {
   .svc { border-right: 1px solid #2a2a2a; }
-  .svc:nth-child(3n) { border-right: none; }
+  .svc:nth-child(3n)  { border-right: none; }
   .svc:nth-child(n+4) { border-bottom: none; }
 }
 @media (max-width: 519px) {
@@ -628,7 +701,7 @@
 }
 .svc-title {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 1.5rem;
+  font-size: var(--fs-card-title);
   letter-spacing: .04em;
   line-height: 1;
   color: var(--white);
@@ -640,7 +713,7 @@
   color: var(--gray-p);
 }
 
-/* pricing strip */
+/* Cartes de tarification */
 .svc-price-card {
   background: var(--black);
   border: 1px solid #2a2a2a;
@@ -650,8 +723,8 @@
   gap: .6rem;
   transition: background .15s, border-color .15s;
 }
-.svc-price-card:hover { background: var(--bg-2); border-color: #444; }
-.svc-price-card--featured { border-color: var(--indigo); }
+.svc-price-card:hover         { background: var(--bg-2); border-color: #444; }
+.svc-price-card--featured     { border-color: var(--indigo); }
 .svc-price-card--featured:hover { border-color: var(--indigo); }
 
 .svc-price-head {
@@ -682,6 +755,8 @@
   line-height: 1;
   color: var(--white);
 }
+
+/* Lien d'action de la carte tarifaire */
 .svc-price-link {
   display: inline-block;
   margin-top: auto;
@@ -697,6 +772,7 @@
   transition: color .15s, background .15s, border-color .15s;
 }
 .svc-price-link:hover { background: var(--white); color: var(--black); }
+
 .svc-price-card--featured .svc-price-link {
   border-color: var(--indigo);
   background: rgba(110, 86, 207, .05);
