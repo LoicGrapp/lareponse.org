@@ -27,16 +27,37 @@
   "proof.4": "Credits billed by the minute",
 
   "services.heading": "WHAT WE DO",
+  "services.title":   "SERVICES",
   "services.cta":     "See all services →",
-  "s1.code":  "S-01",
-  "s1.title": "Showcase sites & portals",
-  "s1.body":  "Consistent sites, portals and platforms designed to last without hidden debt.",
-  "s2.code":  "S-02",
-  "s2.title": "Custom tools",
-  "s2.body":  "Calibrated for freelancers, associations and small structures. Each bug fixed once.",
-  "s3.code":  "S-03",
-  "s3.title": "Automations & parsers",
-  "s3.body":  "Crawlers, document processing, reporting. Lean and stable architectures.",
+  "services.pricing.label": "Our rates",
+  "services.pricing.cta":   "See pricing",
+
+  "s1.code":    "S-01",
+  "s1.title":   "Showcase sites & portals",
+  "s1.body":    "Consistent sites, portals and platforms designed to last without hidden debt.",
+  "s1.benefit": "A readable, fast presence with no technical debt. You can take it back, modify it, transfer it — without us.",
+
+  "s2.code":    "S-02",
+  "s2.title":   "E-commerce & booking",
+  "s2.body":    "Lean, stable purchase and booking flows.",
+  "s2.benefit": "Lean, stable purchase and booking flows. Every step of the journey is comprehensible — no black box.",
+
+  "s3.code":    "S-03",
+  "s3.title":   "Automations",
+  "s3.body":    "Crawlers, document processing, reporting. Lean and stable architectures.",
+  "s3.benefit": "Eliminate repetitive tasks without creating an opaque dependency on third-party services that may disappear.",
+
+  "s4.code":    "S-04",
+  "s4.title":   "Crawlers & parsers",
+  "s4.benefit": "Extract, structure and exploit raw data. No intermediary for what the machine can do alone.",
+
+  "s5.code":    "S-05",
+  "s5.title":   "Document processing",
+  "s5.benefit": "PDFs, invoices, forms, archives — turning bulk into readable, immediately usable structure.",
+
+  "s6.code":    "S-06",
+  "s6.title":   "Reporting & dashboards",
+  "s6.benefit": "Indicators you understand without training, updated without external intervention or SaaS subscriptions.",
 
   "manifeste.cta": "Read the full manifesto →",
 

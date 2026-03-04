@@ -50,6 +50,8 @@ class Router {
         const el = document.getElementById(hash);
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       }, 50);
+    } else {
+      window.scrollTo(0, 0);
     }
   }
 
