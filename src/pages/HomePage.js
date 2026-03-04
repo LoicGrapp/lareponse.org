@@ -15,7 +15,7 @@ export function HomePage() {
         <p class="font-fragment text-[.78rem] tracking-[.22em] uppercase text-[#818CF8] flex items-center gap-4 mb-8 anim"
            style="font-size:.78rem">
           <span class="block w-10 h-px bg-[#818CF8] shrink-0"></span>
-          ${t('hero.eyebrow')}
+          <span data-typing="${t('hero.eyebrow')}"></span>
         </p>
 
         <h1 class="font-bebas leading-[.86] tracking-[-0.01em] mb-12 max-w-[12ch] anim anim-d1"

@@ -155,6 +155,18 @@
 .code-fn       { color: #d4a0ff; }
 .code-const    { color: var(--white); font-weight: 600; }
 
+/* ── TYPING ANIMATION ────────────────────────────────── */
+[data-typing]::after {
+  content: '█';
+  color: #818CF8;
+}
+[data-typing].typing-done::after {
+  animation: blink-cursor .7s step-end infinite;
+}
+@keyframes blink-cursor {
+  50% { opacity: 0; }
+}
+
 /* ── BURGER MENU ─────────────────────────────────────── */
 .burger-icon {
   display: flex;
