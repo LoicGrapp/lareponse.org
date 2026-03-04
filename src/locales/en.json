@@ -45,7 +45,8 @@
 
   "footer.motto": "What is visible can be questioned.",
   "contact.heading": "CONTACT",
-  "contact.2stparagraph": "A human will read your message. Not a bot, not an automated script.",
+  "contact.2ndparagraph": "A human will read your message. Not a bot, not an automated script.",
+  "contact.1stparagraph": "No sales forms. Just describe what you want to build, for whom, and within what timeframe.",
   "contact.response.title": "Response time",
   "contact.response.body" :"Maximum 48 business hours",
   "contact.requirements.title": "What to mention",
