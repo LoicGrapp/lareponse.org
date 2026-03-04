@@ -16,7 +16,7 @@ export function Projects() {
         </header>
 
         <!-- ── INTRO ────────────────────────────────────── -->
-        <p class="fs-body text-[var(--gray-p)] max-w-[44rem] mb-10 border-l-[3px] border-[#2e2e2e] pl-5 anim anim-d1">
+        <p class="fs-body text-[var(--gray-p)] max-w-[44rem] mb-10 border-l-[3px] border-[var(--border)] pl-5 anim anim-d1">
           ${t('projects.intro')}
         </p>
 
@@ -160,8 +160,8 @@ export function Projects() {
 
           <!-- BADHAT — disabled -->
           <article class="proj proj--disabled" role="listitem" data-proj="badhat" aria-disabled="true">
-            <div class="proj-hero">
-              <div class="proj-hero-gradient" style="background:linear-gradient(135deg,#1a0a2e 0%,#3d1a78 40%,#7d64ff 100%)"></div>
+            <div class="proj-hero" data-wip="${t('projects.wip')}">
+              <div class="proj-hero-gradient proj-gradient-badhat"></div>
             </div>
             <div class="proj-title-bar">
               <div class="proj-title-left">

@@ -1,0 +1,175 @@
+/* ═══════════════════════════════════════════════════════════════
+   PAGE TARIFS — CARTES DE PRIX
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Carte de base */
+.price-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  padding: 1.5rem;
+  transition: background 150ms;
+}
+.price-card:hover { background: var(--bg-3); }
+
+/* Variante mise en avant (blanche) */
+.price-card--white {
+  border: 2px solid var(--white);
+  background: var(--bg-3);
+}
+.price-card--white:hover { background: #222; }
+
+/* Variante mise en avant (indigo) */
+.price-card--indigo { border: 2px solid var(--indigo); }
+
+/* Variante fond sombre */
+.price-card--dark {
+  border-color: #333;
+  background: var(--black);
+}
+.price-card--dark:hover { background: var(--bg-2); }
+
+/* Éléments internes communs à toutes les cartes */
+.price-card-name {
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-label);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gray-p);
+}
+.price-card-desc {
+  font-size: var(--fs-body);
+  color: var(--gray-p);
+  line-height: 1.45;
+}
+.price-card-badge {
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-xs);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  border: 1px solid currentcolor;
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+  margin-top: auto;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE TARIFS — BOÎTES RÉSUMÉ
+   ═══════════════════════════════════════════════════════════════ */
+.summary-box {
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  padding: 1.5rem;
+}
+.summary-box-label {
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-label);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 0.5rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE TARIFS — MÉTHODE (steps)
+   ═══════════════════════════════════════════════════════════════ */
+.method-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 2px solid #2e2e2e;
+  box-shadow: 5px 5px 0 var(--indigo);
+}
+@media (min-width: 640px)  { .method-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .method-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.method-step {
+  padding: 2rem;
+  background: var(--bg-2);
+  transition: background 150ms;
+  border-bottom: 2px solid #2e2e2e;
+}
+.method-step:hover { background: var(--bg-3); }
+@media (min-width: 640px) {
+  .method-step:nth-child(odd)  { border-right: 2px solid #2e2e2e; }
+  .method-step:nth-last-child(-n+2) { border-bottom: none; }
+}
+@media (min-width: 1024px) {
+  .method-step              { border-right: 2px solid #2e2e2e; border-bottom: none; }
+  .method-step:last-child   { border-right: none; }
+}
+
+.step-commit {
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-xs);
+  color: var(--indigo);
+  letter-spacing: .05em;
+  margin-bottom: 0.5rem;
+}
+.step-meta {
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-xs);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gray-p);
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+.step-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: var(--fs-card-title);
+  letter-spacing: .04em;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   PAGE TARIFS — INCLUS / NON COUVERT
+   ═══════════════════════════════════════════════════════════════ */
+.coverage-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 2px solid #2e2e2e;
+}
+@media (min-width: 640px) {
+  .coverage-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.coverage-col { padding: 2rem; }
+.coverage-col--inclus { background: var(--bg-2); }
+.coverage-col--exclu  { background: var(--black); }
+@media (min-width: 640px) {
+  .coverage-col--inclus { border-right: 2px solid #2e2e2e; }
+}
+
+.coverage-heading {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: var(--fs-h2);
+  letter-spacing: .04em;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #2e2e2e;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Items avec marqueur (+ ou ×) via ::before */
+.inclus-item,
+.exclu-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+  font-size: var(--fs-body);
+  color: var(--gray-p);
+}
+.inclus-item:not(:last-child),
+.exclu-item:not(:last-child) { border-bottom: 1px solid var(--bg-3); }
+
+.inclus-item::before { content: '+'; color: var(--mint);   font-weight: bold; flex-shrink: 0; }
+.exclu-item::before  { content: '×'; color: var(--indigo); font-weight: bold; flex-shrink: 0; }

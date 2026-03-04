@@ -1,0 +1,109 @@
+/* ═══════════════════════════════════════════════════════════════
+   A11Y.CSS — Accessibilité
+   Ce fichier centralise toutes les règles liées à l'accessibilité.
+   Ne pas modifier sans raison liée à l'accessibilité.
+   ═══════════════════════════════════════════════════════════════ */
+
+
+/* ───────────────────────────────────────────────────────────────
+   SKIP LINK
+   Lien invisible qui apparaît au focus clavier pour sauter
+   directement au contenu principal (obligatoire RGAA 12.7)
+   ─────────────────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: 1rem;
+  z-index: 9999;
+  padding: .6rem 1.2rem;
+  background: var(--indigo-dark);
+  color: var(--white);
+  font-family: "Fragment Mono", monospace;
+  font-size: .9rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--indigo);
+  white-space: nowrap;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   VISUALLY HIDDEN (sr-only)
+   Cache visuellement un élément mais le garde lisible par les
+   lecteurs d'écran (utile pour les labels, descriptions, etc.)
+   ─────────────────────────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   FOCUS VISIBLE — CHAMPS DE FORMULAIRE
+   Le formulaire contact a outline:none sur les champs,
+   ce qui supprime l'indicateur de focus clavier.
+   On le rétablit ici.
+   ─────────────────────────────────────────────────────────────── */
+.field input:focus-visible,
+.field textarea:focus-visible,
+.field select:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: -2px;
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   PREFERS-REDUCED-MOTION
+   Désactive toutes les animations/transitions pour les utilisateurs
+   ayant activé "Réduire les animations" dans leur système.
+   ─────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   PREFERS-CONTRAST: MORE
+   Renforce les contrastes pour les utilisateurs ayant activé
+   un mode de contraste élevé dans leur système.
+   ─────────────────────────────────────────────────────────────── */
+@media (prefers-contrast: more) {
+  :root {
+    --gray-p: #e0ddd8;
+    --indigo: #a5b4fc;
+  }
+
+  .proj,
+  .contact-form,
+  .contact-facts,
+  .svc-grid,
+  .axioms-grid {
+    border-color: #555;
+  }
+
+  .field {
+    border-bottom-color: #555;
+  }
+
+  .proj-tag {
+    border-color: #888;
+  }
+}

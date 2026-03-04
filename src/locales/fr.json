@@ -1,4 +1,5 @@
 {
+  "a11y.skip":       "Aller au contenu principal",
   "nav.home":        "Accueil",
   "nav.manifesto":   "Manifeste",
   "nav.method":      "Méthode",
@@ -212,6 +213,7 @@
   "projects.title": "PROJETS",
   "projects.intro": "LaRéponse fabrique des outils parce que le réel le demande. Chaque projet naît d'un problème concret — pas d'une ambition de catalogue. Ce sont des briques réutilisables, adaptables, transmissibles.",
   "projects.see":     "Voir le projet",
+  "projects.wip":     "En cours de création",
   "projects.soon":    "Bientôt disponible",
   "projects.why":     "Pourquoi",
   "projects.forwhom": "Pour qui",
@@ -258,7 +260,7 @@
   "value.accessibility": "ACCESSIBILITÉ",
   "value.eco":           "ÉCORESPONSABILITÉ",
   "value.inclusivity":   "INCLUSIVITÉ",
-  "value.community":     "COMMUNAUTÉS",
+  "value.community":     "COMMUNAUTÉ",
 
   "manifeste.text":  "Nous ne sommes pas des vendeurs d'heures. Nous concevons des systèmes stables, lisibles, transmissibles — pour les indépendants, les associations et les petites structures. Payé une fois. Validé en 30 jours. Garanti à vie.",
   "manifeste.about": "À PROPOS DE LA RÉPONSE",

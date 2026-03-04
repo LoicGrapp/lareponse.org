@@ -1,0 +1,60 @@
+/* ═══════════════════════════════════════════════════════════════
+   PAGE À PROPOS — GRILLE D'AXIOMES
+   Grille de principes/valeurs avec cellules bordurées
+   ═══════════════════════════════════════════════════════════════ */
+.axioms-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid #1e1e1e;
+}
+@media (min-width: 680px) {
+  .axioms-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1100px) {
+  .axioms-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.axiom-cell {
+  padding: 1.75rem 1.5rem;
+  border-bottom: 1px solid #1e1e1e;
+  border-right: 1px solid #1e1e1e;
+  background: var(--black);
+  transition: background .12s;
+}
+.axiom-cell:hover { background: var(--bg-3); }
+
+/* Numéro / label d'un axiome */
+.axiom-label {
+  font-family: "Fragment Mono", monospace;
+  font-size: var(--fs-label);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Gestion des bordures selon le nombre de colonnes */
+@media (max-width: 679px) {
+  .axiom-cell { border-right: none; }
+  .axiom-cell:last-child { border-bottom: none; }
+}
+@media (min-width: 680px) and (max-width: 1099px) {
+  .axiom-cell:nth-child(even) { border-right: none; }
+  .axiom-cell:nth-last-child(-n+2) { border-bottom: none; }
+}
+@media (min-width: 1100px) {
+  .axiom-cell:nth-child(3n) { border-right: none; }
+  .axiom-cell:nth-last-child(-n+3) { border-bottom: none; }
+}
+
+/* Cellule de conclusion (s'étend sur toute la largeur) */
+.axiom-conclusion {
+  background: var(--indigo-dark);
+  border-right: none;
+  border-bottom: none;
+}
+.axiom-conclusion:hover { background: #3730A3; }
+@media (min-width: 680px) {
+  .axiom-conclusion { grid-column: 1 / -1; }
+}

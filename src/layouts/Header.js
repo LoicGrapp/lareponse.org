@@ -26,6 +26,7 @@ export function Header() {
   const mBase = 'text-[16px] tracking-[.12em] uppercase transition-colors';
 
   return `
+    <a href="#main-content" class="skip-link">${t('a11y.skip')}</a>
     <header class="font-fragment md:sticky md:top-0 z-[100] bg-[#0a0a0a] border-b-2 border-[#2e2e2e]">
 
       <div class="pl-6 pr-0 md:px-[10%]">
@@ -62,7 +63,7 @@ export function Header() {
           <a href="${localePath('/contact')}" data-link
              class="hidden md:flex items-center ${dBase} text-[#f0ede8] bg-[#4F46E5] px-6 hover:bg-[#6366f1] shrink-0 border-l border-[#2e2e2e]
                     ${activePath === '/contact' ? 'bg-[#6366f1]' : ''}">
-            ${t('nav.contact')} →
+            ${t('nav.contact')}
           </a>
 
           <!-- Language switcher (desktop) -->

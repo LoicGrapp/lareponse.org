@@ -56,7 +56,7 @@ export function ServicesPage() {
 
         <!-- ── PRICING STRIP ────────────────────────────── -->
         <section class="mt-10 pt-8 border-t-2 border-[var(--indigo)] anim anim-d2" aria-label="${t('services.pricing.label')}">
-          <p class="font-fragment fs-label tracking-[.18em] uppercase text-[var(--gray-p)] mb-6">${t('services.pricing.label')}</p>
+          <p class="strip-label mb-6">${t('services.pricing.label')}</p>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
             <div class="svc-price-card">
