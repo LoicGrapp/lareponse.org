@@ -180,5 +180,61 @@
   "about.conclusion.num":  "Conclusion",
   "about.conclusion.text": "Ce qui est visible peut être questionné — et ce qui peut être questionné peut être changé.",
 
-  "about.cta.pricing": "Voir les tarifs →"
+  "about.cta.pricing": "Voir les tarifs →",
+
+  "projects.title": "PROJETS",
+  "projects.intro": "LaRéponse fabrique des outils parce que le réel le demande. Chaque projet naît d'un problème concret — pas d'une ambition de catalogue. Ce sont des briques réutilisables, adaptables, transmissibles.",
+  "projects.see":     "Voir le projet",
+  "projects.soon":    "Bientôt disponible",
+  "projects.why":     "Pourquoi",
+  "projects.forwhom": "Pour qui",
+  "projects.what":    "Ce que c'est",
+  "projects.cta.method": "Voir la méthode →",
+
+  "projects.tag.concept":    "Concept prêt",
+  "projects.tag.mvp":        "MVP prêt",
+  "projects.tag.identity":   "Identité posée",
+  "projects.tag.draft":      "Draft avancé",
+  "projects.tag.production": "En production",
+  "projects.tag.wip":        "Socle utilisable",
+
+  "projects.dashbored.etym":    "\"Dashboard\" retourné contre lui-même — une planche de travail, pas un panneau de contrôle.",
+  "projects.dashbored.why":     "Les outils qui figent finissent par devenir des obstacles. La structure se gagne par l'usage.",
+  "projects.dashbored.forwhom": "Collectifs, associations, travailleurs du savoir qui construisent en avançant.",
+  "projects.dashbored.what":    "Environnement de pensée à structure provisoire. Les motifs ne sont promus que s'ils résistent au réel.",
+
+  "projects.dundun.etym":    "\"Done and done.\" — deux coups, deux clôtures. Onomatopée de finition.",
+  "projects.dundun.why":     "Rétablir une discipline d'exécution sans calendrier culpabilisant ni notifications qui fragmentent.",
+  "projects.dundun.forwhom": "Personnes en surcharge cognitive, équipes qui veulent voir les ruptures plutôt que les camoufler.",
+  "projects.dundun.what":    "Préparer → Faire → Clore. Un seul slot actif. La cassure est visible, donc analysable.",
+
+  "projects.tenpoken.etym":    "Toki pona : \"temps possible, temps en puissance.\" Pratiquer le temps — pas le dompter.",
+  "projects.tenpoken.why":     "Refuser la fiction de la maîtrise totale comme celle du récit rétrospectif.",
+  "projects.tenpoken.forwhom": "Créatifs, indépendants, toute personne qui veut une discipline légère sans taxonomie.",
+  "projects.tenpoken.what":    "Event, Now, Window, Drift. Aucun projet, aucune catégorie. Le drift devient instrument de vérité.",
+
+  "projects.jdad.etym":    "\"JSON Data And Directions.\" Données comme parent, directions comme enfant — liés, non confondus.",
+  "projects.jdad.why":     "Cesser de confondre donnée et navigation dans les APIs, et en payer le coût en parsing et latence.",
+  "projects.jdad.forwhom": "Équipes API, IoT, edge, réseaux contraints qui veulent un format prédictible.",
+  "projects.jdad.what":    "Format JSON avec _ comme signifiant de connotation. Relations traversables en temps constant.",
+
+  "projects.koral.etym":    "\"Kollecto · Rapporto · Listo.\" Collecter sans forcer, relier pour rendre imputable.",
+  "projects.koral.why":     "CRM concret façonné par le terrain — pas par les catalogues SaaS qui ne rentrent jamais dans la réalité.",
+  "projects.koral.forwhom": "Petites organisations, métiers de service, contextes associatifs.",
+  "projects.koral.what":    "CRM PHP MIT sur Kadro. Sessions, notes, planners, travailleurs. Convention-over-configuration.",
+
+  "projects.badhat.etym":    "\"Bits Are Decisive. HTTP As Terminal.\" — l'imputable avant le magique.",
+  "projects.badhat.why":     "Ne plus travestir le réel derrière des abstractions commodes. 25 ans de terrain en distillat.",
+  "projects.badhat.forwhom": "Développeurs qui privilégient la causalité à la doctrine, l'imputable au magique.",
+  "projects.badhat.what":    "Noyau PHP minimal : hook → seek → loot → HTTP. Routage par système de fichiers, bitmasks, échec explicite.",
+
+  "value.accessibility": "ACCESSIBILITÉ",
+  "value.eco":           "ÉCORESPONSABILITÉ",
+  "value.inclusivity":   "INCLUSIVITÉ",
+  "value.community":     "COMMUNAUTÉS",
+
+  "manifeste.text":  "Nous ne sommes pas des vendeurs d'heures. Nous concevons des systèmes stables, lisibles, transmissibles — pour les indépendants, les associations et les petites structures. Payé une fois. Validé en 30 jours. Garanti à vie.",
+  "manifeste.about": "À PROPOS DE LA RÉPONSE",
+
+  "cta.text": "Le monde est saturé de bruit technique. LaRéponse fait le contraire : des systèmes clairs, proportionnés, gouvernés par des règles simples. Prêt à construire ?"
 }
