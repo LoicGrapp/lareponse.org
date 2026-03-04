@@ -95,16 +95,17 @@ export function contact(){
                             class="w-full bg-transparent border-b border-[#2a2a2a] resize-none focus:outline-none focus:border-[var(--purple)]"></textarea>
                     </div>
 
+                
+
+                    <!-- Button Area -->
+                    <div class="mt-10 bg-[#151515] p-6">
+                        <button class="w-full py-4 btn-hero"> ENVOYER → </button>
+
+                        <p class="mt-4 text-[10px] text-[var(--gray-p)] text-center">
+                            PAS DE NEWSLETTER · PAS DE RELANCE · UNE PERSONNE LIRA VOTRE MESSAGE
+                        </p>
+                    </div>
                 </form>
-
-                <!-- Button Area -->
-                <div class="mt-10 bg-[#151515] p-6">
-                    <button class="w-full py-4 btn-hero"> ENVOYER → </button>
-
-                    <p class="mt-4 text-[10px] text-[var(--gray-p)] text-center">
-                        PAS DE NEWSLETTER · PAS DE RELANCE · UNE PERSONNE LIRA VOTRE MESSAGE
-                    </p>
-                </div>
 
             </div>
 
