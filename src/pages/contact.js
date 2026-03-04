@@ -1,6 +1,6 @@
 import { t, localePath } from '../lang.js';
 
-export function contact() {
+export function Contact() {
     return `
       <div class="px-6 md:px-[10%] py-12">
         <div class="max-w-[72rem] mx-auto">
