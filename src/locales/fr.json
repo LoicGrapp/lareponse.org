@@ -114,5 +114,71 @@
   "pricing.exclu.3": "APIs externes",
   "pricing.exclu.4": "Migrations d'hébergement",
   "pricing.exclu.5": "Modifications demandées côté client",
-  "pricing.exclu.6": "Nouvelles fonctionnalités ou évolutions de périmètre"
+  "pricing.exclu.6": "Nouvelles fonctionnalités ou évolutions de périmètre",
+
+  "about.title": "À PROPOS",
+
+  "about.qui.label":   "Qui",
+  "about.qui.heading": "Praticiens du minimalisme fonctionnel.",
+  "about.qui.p1":      "Notre rôle n'est pas de vendre des heures, mais de livrer des <strong>systèmes stables et transmissibles</strong>.",
+  "about.qui.p2":      "Un système n'a pas besoin d'être massif pour être robuste. Il doit être clair, proportionné et régi par des règles simples.",
+  "about.qui.refuse":  "Nous refusons :",
+  "about.qui.li1":     "les dépendances fragiles,",
+  "about.qui.li2":     "la facturation de la répétition,",
+  "about.qui.li3":     "les couches inutiles qui gonflent les devis.",
+  "about.qui.p3":      "Nous affirmons qu'un travail bien fait s'honore par sa <strong>durabilité</strong>, et non par la multiplication des factures.",
+
+  "about.quoi.label":   "Quoi",
+  "about.quoi.heading": "Ce que nous faisons.",
+  "about.quoi.intro":   "Nous concevons et déployons :",
+  "about.quoi.li1":     "<strong>sites, portails et plateformes</strong> cohérents,",
+  "about.quoi.li2":     "outils calibrés pour <strong>indépendants, associations et petites structures</strong>,",
+  "about.quoi.li3":     "architectures sobres et stables, conçues pour <strong>durer sans dette cachée</strong>.",
+  "about.quoi.p2":      "Chaque livrable est accompagné de ses tests automatisés. Chaque bug est corrigé une seule fois. Chaque correction devient un <strong>acquis irréversible</strong>.",
+
+  "about.comment.label":   "Comment",
+  "about.comment.heading": "Comment nous travaillons.",
+  "about.comment.intro":   "Notre philosophie s'inspire de <strong>BADHAT</strong> :",
+  "about.comment.li1":     "déléguer chaque responsabilité au niveau le plus efficace (serveur, base, code),",
+  "about.comment.li2":     "supprimer tout décor, toute complexité arbitraire,",
+  "about.comment.li3":     "optimiser l'exécution en respectant la logique des machines.",
+  "about.comment.p2":      "LaRéponse en est l'application pratique :",
+  "about.comment.li4":     "<strong>jamais deux fois facturé</strong> pour le même travail,",
+  "about.comment.li5":     "une période de stabilisation de <strong>trente jours</strong>,",
+  "about.comment.li6":     "puis une <strong>garantie illimitée</strong> tant que le bug est reproductible.",
+  "about.comment.p3":      "Si le test échoue, nous réparons. Si le test réussit mais qu'un problème survient, c'est un nouveau contexte — et donc un nouveau travail.",
+
+  "about.pourqui.label":   "Pour qui",
+  "about.pourqui.heading": "Celles et ceux qui refusent le gaspillage.",
+  "about.pourqui.body":    "Pour celles et ceux qui veulent un <strong>code clair, éprouvé, transmissible</strong>. Pour celles et ceux qui savent que la valeur ne se mesure pas au volume, mais à la <strong>justesse qui demeure</strong>.",
+
+  "about.valeurs.label":   "Valeurs",
+  "about.valeurs.heading": "Le manifeste.",
+
+  "about.rule.label": "— RÈGLE UNIQUE — NON NÉGOCIABLE —",
+  "about.rule.text":  "LaRéponse est une discipline avec une règle unique, non négociable\u00a0: ne pas mentir sur la complexité.",
+
+  "about.axioms.label": "Les axiomes du manifeste",
+
+  "about.axiom1.num":  "Axiome 01 — Complexité",
+  "about.axiom1.text": "La réalité est complexe, et tout ce qui prétend le contraire ne fait que <strong>déplacer cette complexité</strong> vers un fardeau caché, une perte d'agence, et un pouvoir sans responsabilité.",
+  "about.axiom2.num":  "Axiome 02 — Mensonge",
+  "about.axiom2.text": "Ce qui dissimule sa complexité <strong>ment sur lui-même</strong>, exigeant la confiance plutôt que la compréhension ; c'est une forme de coercition.",
+  "about.axiom3.num":  "Axiome 03 — Clarté",
+  "about.axiom3.text": "<strong>La clarté n'est pas la simplicité</strong>, mais l'exposition véridique de la structure. Le minimalisme n'est pas une réduction, mais un refus de masquer ce qui fait fonctionner une chose.",
+  "about.axiom4.num":  "Axiome 04 — Formes humaines",
+  "about.axiom4.text": "Les formes humaines acceptent les limites humaines. Les formes qui <strong>exigent l'adaptation</strong> — au lieu de rencontrer les personnes là où elles sont — exportent leur coût.",
+  "about.axiom5.num":  "Axiome 05 — Autonomie",
+  "about.axiom5.text": "Quand l'effort est supprimé avant la compréhension, <strong>l'autonomie s'effondre en dépendance</strong> ; la facilité sans lisibilité affaiblit celles et ceux qui s'y appuient.",
+  "about.axiom6.num":  "Axiome 06 — Transmission",
+  "about.axiom6.text": "Une transmission qui lisse la structure produit de la conformité, non de la compréhension ; <strong>comprendre exige une résistance.</strong>",
+  "about.axiom7.num":  "Axiome 07 — Pouvoir",
+  "about.axiom7.text": "<strong>Le pouvoir croît là où la structure disparaît</strong> ; rendre la structure visible devient alors un acte de résistance.",
+  "about.axiom8.num":  "Axiome 08 — Responsabilité",
+  "about.axiom8.text": "Celles et ceux qui façonnent les choses sont responsables non seulement des résultats, mais de <strong>ce qu'ils cachent</strong> ; il n'y a pas de neutralité là où la forme dirige le comportement.",
+
+  "about.conclusion.num":  "Conclusion",
+  "about.conclusion.text": "Ce qui est visible peut être questionné — et ce qui peut être questionné peut être changé.",
+
+  "about.cta.pricing": "Voir les tarifs →"
 }
