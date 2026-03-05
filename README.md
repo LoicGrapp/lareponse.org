@@ -233,7 +233,7 @@ export function ServicesPage() {
 }
 ```
 
-**Styles** — Tailwind pour les layouts, CSS custom dans `index.css` pour les composants répétés (`.proj-*`, `.svc-*`, `.axiom-*`, etc.)
+**Styles** — Tailwind pour les layouts, CSS custom dans les différents fichiers des pages.css pour les composants répétés (`.proj-*`, `.svc-*`, `.axiom-*`, etc.)
 
 **Assets** — les images sont dans `src/public/` au format `.webp`. Les chemins utilisent `import.meta.env.BASE_URL`.
 
