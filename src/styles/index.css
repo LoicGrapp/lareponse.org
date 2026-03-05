@@ -213,16 +213,13 @@
 /* Liste à tirets (—) avec couleur accent */
 .dash-list { display: flex; flex-direction: column; }
 .dash-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
+  display: block;
   padding: 0.25rem 0;
 }
 .dash-item::before {
-  content: '—';
+  content: '— ';
   color: var(--indigo);
   font-weight: bold;
-  flex-shrink: 0;
 }
 
 
