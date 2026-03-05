@@ -17,10 +17,6 @@ export function Footer() {
 
         <!-- Links -->
         <nav class="flex items-center">
-          <a href="${localePath('/mentions-legales')}" data-link
-             class="font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#C8C4BE] pr-5 mr-5 border-r border-[#2e2e2e] hover:text-[#f0ede8] transition-colors">
-            ${t('footer.legal')}
-          </a>
           <a href="${localePath('/contact')}" data-link
              class="font-fragment text-[.72rem] tracking-[.12em] uppercase text-[#C8C4BE] hover:text-[#f0ede8] transition-colors">
             ${t('footer.contact')}

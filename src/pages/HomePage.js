@@ -3,7 +3,7 @@ import { t, localePath } from '../lang.js';
 export function HomePage() {
   return `
 
-    <!-- ── HERO ──────────────────────────────────────────── -->
+    <!-- HERO -->
     <section class="relative overflow-hidden py-[clamp(3rem,8vw,6rem)] px-6 md:px-[10%] border-b-2 border-[var(--bg-3)] anim">
 
       <div aria-hidden="true" class="absolute right-[5%] inset-y-0 flex items-center pointer-events-none select-none">
@@ -52,7 +52,7 @@ export function HomePage() {
       </div>
     </section>
 
-    <!-- ── MINI-MANIFESTE ────────────────────────────────── -->
+    <!-- MINI-MANIFESTE -->
     <section class="py-8 px-6 md:px-[10%] anim">
       <div class="max-w-[72rem] mx-auto">
 
@@ -126,8 +126,8 @@ export function HomePage() {
             </div>
             <div class="p-6">
               <p class="font-fragment fs-label tracking-[.22em] uppercase text-[var(--indigo)] mb-2">${t('s1.code')}</p>
-              <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)] mb-2">${t('s1.title')}</p>
-              <p class="fs-body text-[var(--gray-p)]">${t('s1.body')}</p>
+              <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)] mb-2">${t('s4.title')}</p>
+              <p class="fs-body text-[var(--gray-p)]">${t('s4.benefit')}</p>
             </div>
             <div class="svc-preview-footer">→ deployed: zero-debt stack</div>
           </div>
@@ -138,8 +138,8 @@ export function HomePage() {
             </div>
             <div class="p-6">
               <p class="font-fragment fs-label tracking-[.22em] uppercase text-[var(--indigo)] mb-2">${t('s2.code')}</p>
-              <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)] mb-2">${t('s2.title')}</p>
-              <p class="fs-body text-[var(--gray-p)]">${t('s2.body')}</p>
+              <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)] mb-2">${t('s5.title')}</p>
+              <p class="fs-body text-[var(--gray-p)]">${t('s5.benefit')}</p>
             </div>
             <div class="svc-preview-footer">→ built: custom tooling</div>
           </div>
@@ -150,8 +150,8 @@ export function HomePage() {
             </div>
             <div class="p-6">
               <p class="font-fragment fs-label tracking-[.22em] uppercase text-[var(--indigo)] mb-2">${t('s3.code')}</p>
-              <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)] mb-2">${t('s3.title')}</p>
-              <p class="fs-body text-[var(--gray-p)]">${t('s3.body')}</p>
+              <p class="font-bebas fs-card-title tracking-[.04em] text-[var(--white)] mb-2">${t('s6.title')}</p>
+              <p class="fs-body text-[var(--gray-p)]">${t('s6.benefit')}</p>
             </div>
             <div class="svc-preview-footer">→ running: stable pipeline</div>
           </div>

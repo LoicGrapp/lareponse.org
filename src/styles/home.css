@@ -100,7 +100,7 @@
 .code-keyword  { color: var(--indigo); }
 .code-string   { color: #7dcea0; }
 .code-fn       { color: #d4a0ff; }
-.code-const    { color: var(--white); font-weight: 600; }
+.code-const    { color: var(--white); font-weight: 600; margin-left: 5px; }
 
 
 /* ═══════════════════════════════════════════════════════════════

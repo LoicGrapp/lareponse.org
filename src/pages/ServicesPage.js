@@ -18,38 +18,38 @@ export function ServicesPage() {
 
           <article class="svc" role="listitem">
             <p class="svc-id">S&#8211;01</p>
-            <h2 class="svc-title">${t('s1.title')}</h2>
-            <p class="svc-benefit">${t('s1.benefit')}</p>
-          </article>
-
-          <article class="svc" role="listitem">
-            <p class="svc-id">S&#8211;02</p>
-            <h2 class="svc-title">${t('s2.title')}</h2>
-            <p class="svc-benefit">${t('s2.benefit')}</p>
-          </article>
-
-          <article class="svc" role="listitem">
-            <p class="svc-id">S&#8211;03</p>
-            <h2 class="svc-title">${t('s3.title')}</h2>
-            <p class="svc-benefit">${t('s3.benefit')}</p>
-          </article>
-
-          <article class="svc" role="listitem">
-            <p class="svc-id">S&#8211;04</p>
             <h2 class="svc-title">${t('s4.title')}</h2>
             <p class="svc-benefit">${t('s4.benefit')}</p>
           </article>
 
           <article class="svc" role="listitem">
-            <p class="svc-id">S&#8211;05</p>
+            <p class="svc-id">S&#8211;02</p>
             <h2 class="svc-title">${t('s5.title')}</h2>
             <p class="svc-benefit">${t('s5.benefit')}</p>
           </article>
 
           <article class="svc" role="listitem">
-            <p class="svc-id">S&#8211;06</p>
+            <p class="svc-id">S&#8211;03</p>
             <h2 class="svc-title">${t('s6.title')}</h2>
             <p class="svc-benefit">${t('s6.benefit')}</p>
+          </article>
+
+          <article class="svc" role="listitem">
+            <p class="svc-id">S&#8211;04</p>
+            <h2 class="svc-title">${t('s1.title')}</h2>
+            <p class="svc-benefit">${t('s1.benefit')}</p>
+          </article>
+
+          <article class="svc" role="listitem">
+            <p class="svc-id">S&#8211;05</p>
+            <h2 class="svc-title">${t('s2.title')}</h2>
+            <p class="svc-benefit">${t('s2.benefit')}</p>
+          </article>
+
+          <article class="svc" role="listitem">
+            <p class="svc-id">S&#8211;06</p>
+            <h2 class="svc-title">${t('s3.title')}</h2>
+            <p class="svc-benefit">${t('s3.benefit')}</p>
           </article>
 
         </div>
