@@ -262,3 +262,9 @@ Sans ça, les images seraient cassées en production car GitHub Pages sert le si
 ```html
 <a href="${localePath('/contact')}" data-link>Contact</a>
 ```
+
+---
+
+## Utilisation de l'IA
+
+L'IA a été utilisée pour accélérer le développement et intégrer des fonctionnalités complexes, notamment la gestion du multilingue (détection de locale, routing par langue, système de traduction maison). Elle a permis de gagner du temps sur des parties techniques structurantes sans sacrifier la lisibilité ni la maintenabilité du code.
